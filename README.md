@@ -21,6 +21,18 @@ Dental posted-price intelligence for the five operational CDT targets:
 - Neon Postgres for persistent registry data
 - Render for hosting
 
+## Neon
+
+Neon is the production source of truth for clinic and price records. The browser requests live registry data through `GET /api/clinics`; the server connects to Neon using `DATABASE_URL`. The original embedded seed remains only as an automatic front-end fallback if the database/API is temporarily unavailable.
+
+Current production seed:
+
+- 8 verified clinic locations
+- 26 verified target-code price points
+- 5 CDT target codes
+
+Database schema is maintained in `db/schema.sql`.
+
 ## Environment variables
 
 Copy `.env.example` and configure these values in Render:
@@ -29,7 +41,7 @@ Copy `.env.example` and configure these values in Render:
 - `DATABASE_URL`
 - `PORT` (Render supplies this automatically)
 
-The MapTiler key is delivered to the browser through `/api/config`, so users do not have to paste it into the interface.
+`DATABASE_URL` stays server-side. The MapTiler browser key is delivered through `/api/config`, so users do not have to paste it into the interface.
 
 ## Local run
 
@@ -45,5 +57,3 @@ Then open `http://localhost:3000`.
 - `GET /api/health`
 - `GET /api/config`
 - `GET /api/clinics`
-
-The current front end ships with the verified seed registry embedded so the interface remains usable while the Neon-backed live data layer is being activated.
