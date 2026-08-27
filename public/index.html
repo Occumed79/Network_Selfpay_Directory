@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Occu‑Med Dental Intelligence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.maptiler.com/maptiler-sdk-js/v4.1.0/maptiler-sdk.css" rel="stylesheet">
+<script src="https://cdn.maptiler.com/maptiler-sdk-js/v4.1.0/maptiler-sdk.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
+<link rel="stylesheet" href="/app.css">
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<nav class="nav">
+  <div class="navin">
+    <div class="brand">Occu‑Med <b>Dental Intelligence</b></div>
+    <div class="links"><a href="#coverage">Coverage</a><a href="#economics">Pricing</a><a href="#mapSection">Map</a><a href="#compare">Compare</a><a href="#evidence">Evidence</a><a href="#registry">Registry</a></div>
+    <div class="navstat"><i></i><span>Verified-source registry</span></div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <div class="kicker">National dental price intelligence</div>
+      <h1>Five codes.<br>One national view.</h1>
+      <p>Location-level posted pricing for the dental services used in Occu‑Med referrals, paired with evidence quality, geographic coverage, and direct source access.</p>
+      <div class="metric-ribbon">
+        <div class="metric tilt"><label>Verified locations</label><strong data-count="8">0</strong><span>physical clinic records</span></div>
+        <div class="metric tilt"><label>States live</label><strong data-count="5">0</strong><span>50 states + DC tracked</span></div>
+        <div class="metric tilt"><label>Target prices</label><strong data-count="26">0</strong><span>five-code price points</span></div>
+        <div class="metric tilt"><label>Avg capture</label><strong data-count="65" data-suffix="%">0</strong><span>registry completeness</span></div>
+      </div>
+    </div>
+
+    <div class="hero-viz reveal" id="heroViz">
+      <div class="floating-panel panel-a tilt">
+        <div class="panel-title">Geographic footprint</div>
+        <div class="panel-number">5 <span style="font-size:16px;color:var(--muted);font-weight:650">states live</span></div>
+        <div class="hero-map-mini">
+          <div class="gridlines"></div>
+          <div class="mini-dot" style="left:12%;top:23%"></div>
+          <div class="mini-dot" style="left:68%;top:36%"></div>
+          <div class="mini-dot" style="left:75%;top:69%"></div>
+          <div class="mini-dot" style="left:64%;top:58%"></div>
+          <div class="mini-dot" style="left:62%;top:27%"></div>
+        </div>
+      </div>
+      <div class="floating-panel panel-b tilt">
+        <div class="panel-title">Code availability</div>
+        <div class="code-bars" id="heroBars"></div>
+      </div>
+      <div class="floating-panel panel-c tilt">
+        <div class="panel-title">Evidence</div>
+        <div class="panel-number" style="font-size:36px">65%</div>
+        <div style="color:var(--muted);font-size:11px">average target-code capture</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="section white" id="coverage">
+  <div class="wrap">
+    <div class="head reveal">
+      <div class="eyebrow">County coverage heat map</div>
+      <h2 id="heatSectionTitle">Distance to the nearest verified priced clinic.</h2>
+      <p id="heatSectionSubtitle">Each county is shaded by the approximate distance from its geographic centroid to the nearest clinic currently carrying verified posted-price evidence.</p>
+    </div>
+
+    <div class="heat-shell reveal">
+      <div class="heat-head">
+        <div>
+          <h3 id="heatMetricTitle">National coverage gap</h3>
+          <p id="heatMetricDescription">Darker counties are farther from the nearest verified registry location. This makes the geographic holes visible even while the registry is still being built.</p>
+        </div>
+        <div class="heat-controls" id="heatControls">
+          <button class="heat-seg active" data-metric="gap">Coverage gap</button>
+          <button class="heat-seg" data-metric="locations">Clinic count</button>
+          <button class="heat-seg" data-metric="capture">Code completeness</button>
+          <button class="heat-seg" data-metric="pricepoints">Price points</button>
+          <button class="heat-seg" data-metric="d0180">D0180</button>
+        </div>
+      </div>
+
+      <div class="heat-stage" id="heatStage">
+        <svg id="countyHeatmap" aria-label="United States county dental pricing coverage heat map"></svg>
+        <div class="heat-loading" id="heatLoading">Loading U.S. county geometry…</div>
+        <div class="heat-tooltip" id="heatTooltip"></div>
+        <div class="heat-summary">
+          <label id="heatSummaryLabel">Median county gap</label>
+          <strong id="heatSummaryValue">—</strong>
+          <span id="heatSummaryText">Calculated from current verified clinic locations.</span>
+        </div>
+        <div class="heat-legend" id="heatLegend"></div>
+        <div class="heat-zoom">
+          <button id="heatZoomIn" title="Zoom in">+</button>
+          <button id="heatZoomOut" title="Zoom out">−</button>
+        </div>
+      </div>
+
+      <div class="heat-foot">
+        <div class="mapmetric"><label>Counties with a clinic</label><strong id="heatCountiesLive">6</strong></div>
+        <div class="mapmetric"><label>Verified locations</label><strong>8</strong></div>
+        <div class="mapmetric"><label>States represented</label><strong>5</strong></div>
+        <div class="mapmetric"><label>D0180 locations</label><strong>1</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bluewash" id="economics">
+  <div class="wrap">
+    <div class="head reveal">
+      <div class="eyebrow">Code economics</div>
+      <h2>Availability and price range in one view.</h2>
+      <p>Every bar is generated from the verified seed data currently embedded in the registry.</p>
+    </div>
+    <div class="analytics-grid">
+      <div class="analytics-card card reveal">
+        <h3>Observed price ranges</h3>
+        <p>Minimum, average, and maximum posted prices across visible clinic records.</p>
+        <div id="priceRanges"></div>
+      </div>
+      <div class="analytics-card card reveal">
+        <h3>Code capture</h3>
+        <p>Share of current registry locations with a posted price for each target code.</p>
+        <div class="rings" id="captureRings"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section white" id="mapSection">
+  <div class="wrap">
+    <div class="head reveal">
+      <div class="eyebrow">Geographic pricing map</div>
+      <h2>Actual clinic locations on MapTiler.</h2>
+      <p>Filter by CDT code, inspect a clinic, and move through the registry geographically.</p>
+    </div>
+
+    <div class="map-shell reveal">
+      <div class="map-head">
+        <div><h3>National map</h3><p>MapTiler DataViz Light · click a marker for prices and evidence.</p></div>
+        <div class="map-controls" id="mapControls">
+          <button class="seg active" data-code="ALL">All</button>
+          <button class="seg" data-code="D0150">D0150</button>
+          <button class="seg" data-code="D0180">D0180</button>
+          <button class="seg" data-code="D0210">D0210</button>
+          <button class="seg" data-code="D0274">D0274</button>
+          <button class="seg" data-code="D0330">D0330</button>
+        </div>
+      </div>
+      <div id="map">
+        <div class="map-key-overlay" id="mapKeyOverlay">
+          <div class="key-card">
+            <h4>Loading geographic intelligence</h4>
+            <p id="mapConfigMessage">Connecting to the hosted MapTiler configuration…</p>
+          </div>
+        </div>
+      </div>
+      <div class="map-metrics">
+        <div class="mapmetric"><label>Visible locations</label><strong id="mapLoc">8</strong></div>
+        <div class="mapmetric"><label>States represented</label><strong id="mapStates">5</strong></div>
+        <div class="mapmetric"><label>Average capture</label><strong id="mapCov">65%</strong></div>
+        <div class="mapmetric"><label>D0180 locations</label><strong id="map180">1</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="compare">
+  <div class="wrap">
+    <div class="head reveal">
+      <div class="eyebrow">Clinic comparison studio</div>
+      <h2>Compare two locations code by code.</h2>
+      <p>Use the same five-code structure to spot price differences instantly.</p>
+    </div>
+    <div class="compare-shell card reveal">
+      <div class="compare-toolbar">
+        <div class="selectwrap"><label>Clinic A</label><select id="clinicA"></select></div>
+        <div class="selectwrap"><label>Clinic B</label><select id="clinicB"></select></div>
+      </div>
+      <div class="compare-grid" id="compareGrid"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section white" id="evidence">
+  <div class="wrap">
+    <div class="head reveal">
+      <div class="eyebrow">Evidence freshness</div>
+      <h2>Source age is visible, not hidden.</h2>
+      <p>Older schedules stay usable as leads, but the registry makes refresh priority obvious.</p>
+    </div>
+    <div class="freshness-layout">
+      <div class="fresh-summary card reveal" id="freshSummary"></div>
+      <div class="timeline reveal" id="timeline"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="registry">
+  <div class="wrap">
+    <div class="head reveal">
+      <div class="eyebrow">Registry explorer</div>
+      <h2>Search the underlying evidence.</h2>
+      <p>Filter the seed build by location, completeness, D0180 availability, and source freshness.</p>
+    </div>
+    <div class="explorer card reveal">
+      <div class="toolbar">
+        <div class="search"><span>⌕</span><input id="searchInput" placeholder="Clinic, city, state, ZIP, registry ID"></div>
+        <div class="filters">
+          <button class="filter active" data-filter="all">All verified</button>
+          <button class="filter" data-filter="complete">80%+ complete</button>
+          <button class="filter" data-filter="d0180">D0180</button>
+          <button class="filter" data-filter="fresh">Recent/current</button>
+        </div>
+      </div>
+      <div class="tablewrap"><table><thead><tr><th>Clinic</th><th>Location</th><th>Coverage</th><th>D0150</th><th>D0180</th><th>D0210</th><th>D0274</th><th>D0330</th><th>Source</th></tr></thead><tbody id="tableBody"></tbody></table></div>
+    </div>
+  </div>
+</section>
+
+<script src="/app.js"></script>
+</body>
+</html>
