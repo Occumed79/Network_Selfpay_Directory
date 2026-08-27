@@ -2,10 +2,12 @@ import express from 'express';
 import compression from 'compression';
 import helmet from 'helmet';
 import pg from 'pg';
+import { fileURLToPath } from 'url';
 
 const { Pool } = pg;
 const app = express();
 const port = process.env.PORT || 3000;
+const indexPath = fileURLToPath(new URL('./public/index.html', import.meta.url));
 
 app.disable('x-powered-by');
 app.use(compression());
@@ -96,8 +98,8 @@ app.get('/api/clinics', async (_req, res) => {
   }
 });
 
-app.get('*', (_req, res) => {
-  res.sendFile(new URL('./public/index.html', import.meta.url).pathname);
+app.get('/{*splat}', (_req, res) => {
+  res.sendFile(indexPath);
 });
 
 app.listen(port, () => {
