@@ -30,6 +30,21 @@ CREATE TABLE IF NOT EXISTS clinic_prices (
   UNIQUE (clinic_id, cdt_code)
 );
 
+CREATE TABLE IF NOT EXISTS clinic_contacts (
+  clinic_id text PRIMARY KEY REFERENCES clinics(registry_id) ON DELETE CASCADE,
+  phone text,
+  fax text,
+  email text,
+  phone_scope text,
+  fax_scope text,
+  email_scope text,
+  contact_source_url text,
+  contact_status text,
+  verified_on date,
+  updated_at timestamptz NOT NULL DEFAULT now()
+);
+
 CREATE INDEX IF NOT EXISTS clinics_state_city_idx ON clinics(state, city);
 CREATE INDEX IF NOT EXISTS clinics_county_fips_idx ON clinics(county_fips);
 CREATE INDEX IF NOT EXISTS clinic_prices_code_idx ON clinic_prices(cdt_code);
+CREATE INDEX IF NOT EXISTS clinic_contacts_email_idx ON clinic_contacts(email);
