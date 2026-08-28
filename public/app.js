@@ -11,7 +11,15 @@
     console.warn('Neon registry unavailable; using embedded fallback seed.', error);
   }
 
-  const scripts = [useNeon ? '/app-runtime.js' : '/app-data.js', '/app-heatmap.js', '/app-ui.js'];
+  const scripts = [
+    useNeon ? '/app-runtime.js' : '/app-data.js',
+    '/app-contacts.js',
+    '/provider-directory.js',
+    '/app-heatmap.js',
+    '/app-ui.js',
+    '/map-landscape.js'
+  ];
+
   for (const src of scripts) {
     await new Promise((resolve, reject) => {
       const script = document.createElement('script');
