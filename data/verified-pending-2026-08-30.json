@@ -1,0 +1,92 @@
+{
+  "batch": "2026-08-30-beast-mode-01",
+  "status": "VERIFIED_PENDING_NEON",
+  "reason_pending": "Neon MCP write endpoint is currently rejecting both its documented camelCase schema and backend snake_case schema; preserve verified work here until writes recover.",
+  "target_codes": ["D0150","D0180","D0210","D0274","D0330"],
+  "summary": {
+    "new_physical_clinics": 4,
+    "new_exact_price_points": 17,
+    "states": ["AZ","CA","IL"]
+  },
+  "records": [
+    {
+      "registry_id": "CA-MONTEREY-LAPAZ",
+      "clinic_name": "La Paz Dental Care / Monterey County Health Department Clinic Services",
+      "state": "CA",
+      "city": "Salinas",
+      "zip": "93905",
+      "address": "559 E Alisal St, Suite 101, Salinas, CA 93905",
+      "phone": "831-757-1111",
+      "clinic_type": "County Health Department family dental practice / acquired private dental practice",
+      "source_year": 2026,
+      "freshness": "CURRENT",
+      "evidence_grade": "A",
+      "price_basis": "Monterey County Health Department 2026 SFDP Full Charge column",
+      "pricing_source_url": "https://monterey.legistar.com/View.ashx?GUID=8EEA5BA0-845D-4321-B3D8-79829D66DAAA&ID=15485596&M=F",
+      "location_url": "https://www.lapazdental.com/",
+      "operational_source_url": "https://monterey.legistar.com/LegislationDetail.aspx?GUID=CF98EB35-7ECC-4EBE-8330-BD7AEABA330E&ID=8121093&Options=&Search=",
+      "prices": {"D0150":153.00,"D0180":163.00,"D0210":217.00,"D0274":104.00,"D0330":191.00},
+      "note": "Current Monterey County schedule effective 7/1/2026. County approved acquisition/lease actions concerning this exact dental practice and the clinic remains publicly active at the same address."
+    },
+    {
+      "registry_id": "IL-WILL-JOLIET-DENTAL",
+      "clinic_name": "Will County Community Health Center Dental Clinic",
+      "state": "IL",
+      "city": "Joliet",
+      "zip": "60433",
+      "address": "1106 Neal Avenue, Joliet, IL 60433",
+      "phone": "815-727-8670",
+      "clinic_type": "FQHC / County Community Health Center",
+      "source_year": 2024,
+      "freshness": "REFRESH",
+      "evidence_grade": "A-",
+      "price_basis": "WCCHC provider-owned FULL FEE column",
+      "pricing_source_url": "https://willcountyhealth.org/wp-content/uploads/2024/05/BOH-PACKET-L-6.pdf",
+      "location_url": "https://willcountyhealth.org/chc/",
+      "prices": {"D0150":110.00,"D0180":null,"D0210":175.00,"D0274":82.00,"D0330":150.00},
+      "note": "Current CHC site confirms dental services for children and adults at the Joliet main office. Bolingbrook and Monee are not fanned out because their listed services do not include dental."
+    },
+    {
+      "registry_id": "AZ-YAVAPAI-PRESCOTT-VALLEY-DENTAL",
+      "clinic_name": "Community Health Center of Yavapai - Prescott Valley Dental",
+      "state": "AZ",
+      "city": "Prescott Valley",
+      "zip": "86314",
+      "address": "3212 North Windsong Drive, Suite 200, Prescott Valley, AZ 86314",
+      "phone": "928-583-1000",
+      "clinic_type": "FQHC / County Community Health Center",
+      "source_year": 2025,
+      "freshness": "CURRENT",
+      "evidence_grade": "A",
+      "price_basis": "CHCY Dental Fee Schedule Full fee column, effective 8/1/2025 and published as 2026 fee schedule",
+      "pricing_source_url": "https://www.yavapaiaz.gov/files/sharedassets/public/v/1/resident-services/community-health/documents/2026-fee-schedules-dental.pdf",
+      "location_url": "https://www.yavapaiaz.gov/Resident-Services/Health-Services/Community-Health-Center-of-Yavapai",
+      "prices": {"D0150":132.00,"D0180":139.00,"D0210":185.00,"D0274":90.00,"D0330":null},
+      "note": "Current CHCY provider roster explicitly places dentistry and dental hygiene in Prescott Valley. D0330 is not present in the current published fee sheet and is intentionally left null."
+    },
+    {
+      "registry_id": "AZ-YAVAPAI-COTTONWOOD-DENTAL",
+      "clinic_name": "Community Health Center of Yavapai - Cottonwood Dental",
+      "state": "AZ",
+      "city": "Cottonwood",
+      "zip": "86326",
+      "address": "51 South Brian Mickelsen Parkway, Cottonwood, AZ 86326",
+      "phone": "928-639-8132",
+      "clinic_type": "FQHC / County Community Health Center",
+      "source_year": 2025,
+      "freshness": "CURRENT",
+      "evidence_grade": "A",
+      "price_basis": "CHCY Dental Fee Schedule Full fee column, effective 8/1/2025 and published as 2026 fee schedule",
+      "pricing_source_url": "https://www.yavapaiaz.gov/files/sharedassets/public/v/1/resident-services/community-health/documents/2026-fee-schedules-dental.pdf",
+      "location_url": "https://www.yavapaiaz.gov/Resident-Services/Health-Services/Community-Health-Center-of-Yavapai",
+      "prices": {"D0150":132.00,"D0180":139.00,"D0210":185.00,"D0274":90.00,"D0330":null},
+      "note": "Current CHCY provider roster explicitly places multiple dentists in Cottonwood. D0330 is not present in the current published fee sheet and is intentionally left null."
+    }
+  ],
+  "rejected_or_held": [
+    {"name":"Peoria City/County Health Department Dental","reason":"Department dental office permanently closed 1/31/2025; old fees not transferrable to successor OSF clinic."},
+    {"name":"Dental Arts of the Hudson Valley","reason":"Located fee table is a benefit-trust preferred-provider allowance, not public self-pay office pricing."},
+    {"name":"Montana University System dental fee schedule","reason":"Plan maximum reimbursement schedule, not provider patient charge."},
+    {"name":"Suncoast Community Health Centers older dental full-fee table","reason":"Provider states self-pay dental rates changed June 1, 2026; older values withheld until new exact fees are verified."}
+  ]
+}
