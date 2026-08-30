@@ -4,8 +4,8 @@
   "reason_pending": "Neon MCP write endpoint remains blocked by connector schema mismatch; verified records are preserved in GitHub until database writes recover.",
   "target_codes": ["D0150", "D0180", "D0210", "D0274", "D0330"],
   "summary": {
-    "new_physical_clinics": 4,
-    "new_exact_price_points": 12,
+    "new_physical_clinics": 3,
+    "new_exact_price_points": 8,
     "states": ["CO", "FL"]
   },
   "records": [
@@ -63,27 +63,10 @@
       "location_url": "https://mountainkidspediatricdentistry.com/contact/",
       "prices": {"D0150":117.00,"D0180":null,"D0210":null,"D0274":null,"D0330":152.00},
       "note": "Current 2026 provider FAQ publishes these office fees directly. It lists D0272 but not D0274; registry does not infer a four-bitewing fee from the two-bitewing charge. D0180 and D0210 are also absent and intentionally null."
-    },
-    {
-      "registry_id": "CO-DENVER-KREIDER-FAMILY-DENTAL",
-      "clinic_name": "Kreider Family Dental",
-      "state": "CO",
-      "city": "Denver",
-      "zip": "80209",
-      "address": "3955 E Exposition Ave, Suite 312, Denver, CO 80209",
-      "phone": "303-744-3636",
-      "clinic_type": "Private dental practice",
-      "source_year": 2026,
-      "freshness": "CURRENT",
-      "evidence_grade": "A",
-      "price_basis": "Provider-published 2026 Treatment Fee Disclosure identified by the practice as cash-pay prices",
-      "pricing_source_url": "https://www.kreiderfamilydentistry.com/services-7",
-      "location_url": "https://www.kreiderfamilydentistry.com/services-7",
-      "prices": {"D0150":139.00,"D0180":null,"D0210":206.00,"D0274":103.00,"D0330":177.00},
-      "note": "Direct 2026 practice cash-pay disclosure. D0180 is not among the published services and is intentionally null."
     }
   ],
   "held_or_rejected": [
+    {"name":"Kreider Family Dental, CO","reason":"Removed from this batch after direct batch-file audit showed it was already committed in Batch 04; duplicate not counted."},
     {"name":"Cleveland County Health Department Dental Clinic, NC","reason":"Latest exact indexed dental charges are from FY2025-26; FY2026-27 budget is adopted but current dental fee rows were not verified. Held rather than mislabeled CURRENT."},
     {"name":"Union County Public Health Dental Clinic, NC","reason":"Latest exact indexed dental table is the prior adopted fiscal year. Current clinic and standard-fee billing policy are verified, but exact FY2026-27 rows are not yet verified."},
     {"name":"Portland State University SHAC Dental Service","reason":"Current fees effective 7/1/2026 are published as ranges for target codes. Registry scalar schema does not permit forcing a midpoint or arbitrary endpoint."}
