@@ -1,0 +1,72 @@
+{
+  "batch": "2026-08-30-beast-mode-11",
+  "status": "VERIFIED_PENDING_NEON",
+  "reason_pending": "Neon MCP write endpoint remains blocked by connector schema mismatch; verified records are preserved in GitHub until database writes recover.",
+  "target_codes": ["D0150", "D0180", "D0210", "D0274", "D0330"],
+  "summary": {
+    "new_physical_clinics": 3,
+    "new_exact_price_points": 6,
+    "states": ["CO"]
+  },
+  "records": [
+    {
+      "registry_id": "CO-EL-PASO-COS-KIDS-ROCK-WOODMEN",
+      "clinic_name": "Kids Rock Dentistry & Orthodontics - Woodmen",
+      "state": "CO",
+      "city": "Colorado Springs",
+      "zip": "80920",
+      "address": "5430 E Woodmen Rd, Colorado Springs, CO 80920",
+      "phone": "719-424-4668",
+      "clinic_type": "Private pediatric dentistry and orthodontics practice",
+      "source_year": 2026,
+      "freshness": "CURRENT",
+      "evidence_grade": "A",
+      "price_basis": "Provider-published Top 15 Office Codes and Prices",
+      "pricing_source_url": "https://www.kidsrockdentistry.com/financial-information/",
+      "location_url": "https://www.kidsrockdentistry.com/financial-information/",
+      "prices": {"D0150":126.00,"D0180":null,"D0210":null,"D0274":null,"D0330":157.00},
+      "note": "The same current provider pricing page explicitly lists this physical location. Only target codes directly present in the Top 15 Office Codes and Prices are entered; D0180, D0210, and D0274 are absent and intentionally null."
+    },
+    {
+      "registry_id": "CO-EL-PASO-COS-KIDS-ROCK-UNION",
+      "clinic_name": "Kids Rock Dentistry & Orthodontics - Union",
+      "state": "CO",
+      "city": "Colorado Springs",
+      "zip": "80907",
+      "address": "3350 N Union Blvd, Colorado Springs, CO 80907",
+      "phone": "719-285-0085",
+      "clinic_type": "Private pediatric dentistry and orthodontics practice",
+      "source_year": 2026,
+      "freshness": "CURRENT",
+      "evidence_grade": "A",
+      "price_basis": "Provider-published Top 15 Office Codes and Prices",
+      "pricing_source_url": "https://www.kidsrockdentistry.com/financial-information/",
+      "location_url": "https://www.kidsrockdentistry.com/financial-information/",
+      "prices": {"D0150":126.00,"D0180":null,"D0210":null,"D0274":null,"D0330":157.00},
+      "note": "The same current provider pricing page explicitly lists this physical location. Only target codes directly present in the Top 15 Office Codes and Prices are entered; D0180, D0210, and D0274 are absent and intentionally null."
+    },
+    {
+      "registry_id": "CO-EL-PASO-COS-KIDS-ROCK-BROADMOOR",
+      "clinic_name": "Kids Rock Dentistry & Orthodontics - Broadmoor Bluffs",
+      "state": "CO",
+      "city": "Colorado Springs",
+      "zip": "80906",
+      "address": "4515 Broadmoor Bluffs Drive, Colorado Springs, CO 80906",
+      "phone": "719-900-5558",
+      "clinic_type": "Private pediatric dentistry and orthodontics practice",
+      "source_year": 2026,
+      "freshness": "CURRENT",
+      "evidence_grade": "A",
+      "price_basis": "Provider-published Top 15 Office Codes and Prices",
+      "pricing_source_url": "https://www.kidsrockdentistry.com/financial-information/",
+      "location_url": "https://www.kidsrockdentistry.com/financial-information/",
+      "prices": {"D0150":126.00,"D0180":null,"D0210":null,"D0274":null,"D0330":157.00},
+      "note": "The same current provider pricing page explicitly lists this physical location. Only target codes directly present in the Top 15 Office Codes and Prices are entered; D0180, D0210, and D0274 are absent and intentionally null."
+    }
+  ],
+  "rejected_or_held": [
+    {"name":"Four Corners Dental & Dentures, Durango CO","reason":"Current provider page publishes plain-language 4 BiteWing and Pano prices but does not attach exact CDT codes; registry does not infer D0274 or D0330 from unlabeled descriptions."},
+    {"name":"Timmons Dental","reason":"Provider publishes bundled preventive/new-patient prices containing multiple CDT codes but does not expose separate regular per-code target values; bundle not split."},
+    {"name":"Midwest Oral & Maxillofacial Surgery","reason":"Published prices are membership-plan focused and new-patient imaging is bundled across multiple codes; no individual unrestricted target-code values extracted."}
+  ]
+}
