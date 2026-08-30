@@ -26,8 +26,18 @@ const clinics = [
     sourceYear:2022, freshness:'LEGACY', grade:'A-', basis:'Above 200% FPL No Discount / prevailing local rate',
     source:'https://rosaclarkclinic.org/wp-content/uploads/2022/02/Dental-Sliding-Fee-Scale-2022.pdf',
     location:'https://rosaclarkclinic.org/',
-    note:'Dental service remains active on provider-owned site. Exact CDT values are the undiscounted Above-200%-FPL column; older fee schedule retained as refresh-priority legacy evidence.',
-    prices:{D0150:97,D0180:130,D0210:152,D0274:69,D0330:122}
+    note:'Dental service remains active on provider-owned site. Exact CDT values are the undiscounted Above-200%-FPL column. The source prints DO180 rather than D0180, so that row is intentionally NOT mapped to D0180. D0210 is marked child-only. Older schedule retained as refresh-priority legacy evidence.',
+    prices:{D0150:97,D0210:152,D0274:69,D0330:122}
+  },
+  {
+    id:'IL-WILL-CHC-DENTAL', state:'IL', city:'Joliet', zip:'60433',
+    name:'Will County Community Health Center Dental Clinic',
+    address:'1106 Neal Avenue, Joliet, IL 60433', type:'County Community Health Center Dental Clinic',
+    sourceYear:2024, freshness:'REFRESH', grade:'A-', basis:'Full Fee',
+    source:'https://willcountyhealth.org/wp-content/uploads/2024/05/BOH-PACKET-L-6.pdf',
+    location:'https://willcountyhealth.org/community-health-center/dental-services/',
+    note:'Active full-service dental clinic for adults and children confirmed on county health department site. Exact CDT prices use the Full Fee column; no D0180 row admitted because it was not verified in the published target-code set.',
+    prices:{D0150:110,D0210:175,D0274:82,D0330:150}
   }
 ];
 
