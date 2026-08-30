@@ -4,9 +4,9 @@
   "reason_pending": "Neon MCP write endpoint is currently rejecting both its documented camelCase schema and backend snake_case schema; preserve verified work here until writes recover.",
   "target_codes": ["D0150","D0180","D0210","D0274","D0330"],
   "summary": {
-    "new_physical_clinics": 4,
-    "new_exact_price_points": 17,
-    "states": ["AZ","CA","IL"]
+    "new_physical_clinics": 5,
+    "new_exact_price_points": 22,
+    "states": ["AZ","CA","IL","NC"]
   },
   "records": [
     {
@@ -81,6 +81,24 @@
       "location_url": "https://www.yavapaiaz.gov/Resident-Services/Health-Services/Community-Health-Center-of-Yavapai",
       "prices": {"D0150":132.00,"D0180":139.00,"D0210":185.00,"D0274":90.00,"D0330":null},
       "note": "Current CHCY provider roster explicitly places multiple dentists in Cottonwood. D0330 is not present in the current published fee sheet and is intentionally left null."
+    },
+    {
+      "registry_id": "NC-WILSON-WASH-DENTAL",
+      "clinic_name": "Wilson County Health Department WASH Dental Clinic",
+      "state": "NC",
+      "city": "Wilson",
+      "zip": "27893",
+      "address": "2201 Miller Rd. South, Wilson, NC 27893",
+      "phone": "252-237-3141 ext. 6291",
+      "clinic_type": "County Health Department / school-based pediatric dental program",
+      "source_year": 2023,
+      "freshness": "LEGACY",
+      "evidence_grade": "A-",
+      "price_basis": "Wilson County Health Department adopted dental fee schedule",
+      "pricing_source_url": "https://www.wilsoncountync.gov/home/showpublisheddocument/7140/638227769065270000",
+      "location_url": "https://www.wilsoncountync.gov/departments/health-department/wash-dental",
+      "prices": {"D0150":91.00,"D0180":100.00,"D0210":136.00,"D0274":68.00,"D0330":116.00},
+      "note": "Exact five-code county fee schedule is 2023-24 and therefore marked LEGACY. Current county pages confirm the WASH dental program is active, provides care at the health department and schools, and offers sliding-fee access for eligible Wilson County children without dental insurance. Do not present as unrestricted general-adult access."
     }
   ],
   "rejected_or_held": [
