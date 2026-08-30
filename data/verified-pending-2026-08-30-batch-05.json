@@ -1,0 +1,90 @@
+{
+  "batch": "2026-08-30-beast-mode-05",
+  "status": "VERIFIED_PENDING_NEON",
+  "reason_pending": "Neon MCP write endpoint remains blocked by connector schema mismatch; verified records are preserved in GitHub until database writes recover.",
+  "target_codes": ["D0150", "D0180", "D0210", "D0274", "D0330"],
+  "summary": {
+    "new_physical_clinics": 4,
+    "new_exact_price_points": 20,
+    "states": ["OR"]
+  },
+  "records": [
+    {
+      "registry_id": "OR-CLACKAMAS-OREGON-CITY-BEAVERCREEK",
+      "clinic_name": "Clackamas County Beavercreek Health Center",
+      "state": "OR",
+      "city": "Oregon City",
+      "zip": "97045",
+      "address": "110 Beavercreek Road, Suite 100, Oregon City, OR 97045",
+      "phone": "503-655-8471",
+      "clinic_type": "County FQHC / Community Health Center dental clinic",
+      "source_year": null,
+      "freshness": "CURRENT",
+      "evidence_grade": "A",
+      "price_basis": "Current codified Clackamas County Appendix A dental fee schedule",
+      "pricing_source_url": "https://www.clackamas.us/code/appendixa",
+      "location_url": "https://www.clackamas.us/healthcenters/dental",
+      "prices": {"D0150":160.00,"D0180":173.00,"D0210":207.00,"D0274":99.00,"D0330":171.00},
+      "note": "Current county dental page confirms this location provides dental care. Clackamas offers sliding-fee discounts to eligible uninsured/underinsured patients; these registry values are the county's published standard fee amounts, not discounted patient copays. Current access notice says new uninsured patients are accepted for urgent problem-focused appointments only."
+    },
+    {
+      "registry_id": "OR-CLACKAMAS-GLADSTONE-HEALTH-CENTER-DENTAL",
+      "clinic_name": "Clackamas County Gladstone Health Center Dental Clinic",
+      "state": "OR",
+      "city": "Gladstone",
+      "zip": "97027",
+      "address": "18911 Portland Ave, Gladstone, OR 97027",
+      "phone": "503-655-8471",
+      "clinic_type": "County FQHC / Community Health Center pediatric dental clinic",
+      "source_year": null,
+      "freshness": "CURRENT",
+      "evidence_grade": "A",
+      "price_basis": "Current codified Clackamas County Appendix A dental fee schedule",
+      "pricing_source_url": "https://www.clackamas.us/code/appendixa",
+      "location_url": "https://www.clackamas.us/healthcenters/gladstone",
+      "prices": {"D0150":160.00,"D0180":173.00,"D0210":207.00,"D0274":99.00,"D0330":171.00},
+      "note": "Current county page confirms dental care at Gladstone, with dental services limited to babies and young people through age 18. Sliding-fee discounts may apply; registry values are published county standard fees, not discounted copays. Current access notice says new uninsured patients are accepted for urgent problem-focused appointments only."
+    },
+    {
+      "registry_id": "OR-CLACKAMAS-SANDY-HEALTH-CENTER-DENTAL",
+      "clinic_name": "Clackamas County Sandy Health Center",
+      "state": "OR",
+      "city": "Sandy",
+      "zip": "97055",
+      "address": "39740 Pleasant St, Sandy, OR 97055",
+      "phone": "503-655-8471",
+      "clinic_type": "County FQHC / Community Health Center dental clinic",
+      "source_year": null,
+      "freshness": "CURRENT",
+      "evidence_grade": "A",
+      "price_basis": "Current codified Clackamas County Appendix A dental fee schedule",
+      "pricing_source_url": "https://www.clackamas.us/code/appendixa",
+      "location_url": "https://www.clackamas.us/healthcenters/dental",
+      "prices": {"D0150":160.00,"D0180":173.00,"D0210":207.00,"D0274":99.00,"D0330":171.00},
+      "note": "Current county dental page explicitly lists Sandy among active dental locations. Sliding-fee discounts may apply; registry values are published county standard fees, not discounted copays. Current access notice says new uninsured patients are accepted for urgent problem-focused appointments only."
+    },
+    {
+      "registry_id": "OR-CLACKAMAS-SUNNYSIDE-HEALTH-CENTER-DENTAL",
+      "clinic_name": "Clackamas County Sunnyside Health Center",
+      "state": "OR",
+      "city": "Clackamas",
+      "zip": "97015",
+      "address": "9775 Sunnyside Road, Suite 200, Clackamas, OR 97015",
+      "phone": "503-655-8471",
+      "clinic_type": "County FQHC / Community Health Center dental clinic",
+      "source_year": null,
+      "freshness": "CURRENT",
+      "evidence_grade": "A",
+      "price_basis": "Current codified Clackamas County Appendix A dental fee schedule",
+      "pricing_source_url": "https://www.clackamas.us/code/appendixa",
+      "location_url": "https://www.clackamas.us/healthcenters/sunnyside",
+      "prices": {"D0150":160.00,"D0180":173.00,"D0210":207.00,"D0274":99.00,"D0330":171.00},
+      "note": "Current county page confirms dental services at Sunnyside. Sliding-fee discounts may apply; registry values are published county standard fees, not discounted copays. Current access notice says new uninsured patients are accepted for urgent problem-focused appointments only."
+    }
+  ],
+  "rejected_or_held": [
+    {"name":"Monterey County Health Department dental schedule","reason":"Already represented in Batch 01 by the verified La Paz Dental Care / Monterey County clinic record; no additional physical dental location was fanned out without explicit current site-level dental verification."},
+    {"name":"Montana University System dental schedule","reason":"Employee/retiree benefit plan fee schedule, not provider self-pay pricing."},
+    {"name":"Medicaid reimbursement schedules","reason":"Government reimbursement rates are not provider self-pay charges."}
+  ]
+}
