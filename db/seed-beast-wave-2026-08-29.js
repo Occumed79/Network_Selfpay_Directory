@@ -38,6 +38,26 @@ const clinics = [
     location:'https://willcountyhealth.org/community-health-center/dental-services/',
     note:'Active full-service dental clinic for adults and children confirmed on county health department site. Exact CDT prices use the Full Fee column; no D0180 row admitted because it was not verified in the published target-code set.',
     prices:{D0150:110,D0210:175,D0274:82,D0330:150}
+  },
+  {
+    id:'AZ-YAVAPAI-PRESCOTT-VALLEY-DENTAL', state:'AZ', city:'Prescott Valley', zip:'86314',
+    name:'Community Health Center of Yavapai – Prescott Valley Dental',
+    address:'3212 North Windsong Drive, Suite 200, Prescott Valley, AZ 86314', type:'County FQHC Dental Clinic',
+    sourceYear:2026, freshness:'CURRENT', grade:'A', basis:'Full Fee / >200% FPL Full Fee',
+    source:'https://www.yavapaiaz.gov/files/sharedassets/public/v/1/resident-services/community-health/documents/fee-schedule-dental-1.pdf',
+    location:'https://www.yavapaiaz.gov/Resident-Services/Health-Services/Community-Health-Center-of-Yavapai',
+    note:'Official county 2026 dental fee schedule effective 8/1/2025. Current CHCY provider roster confirms dentistry in Prescott Valley. Only target codes visible and verifiable in the official indexed schedule are admitted; D0330 is left blank.',
+    prices:{D0150:132,D0180:139,D0210:185,D0274:90}
+  },
+  {
+    id:'AZ-YAVAPAI-COTTONWOOD-DENTAL', state:'AZ', city:'Cottonwood', zip:'86326',
+    name:'Community Health Center of Yavapai – Cottonwood Dental',
+    address:'51 South Brian Mickelsen Parkway, Cottonwood, AZ 86326', type:'County FQHC Dental Clinic',
+    sourceYear:2026, freshness:'CURRENT', grade:'A', basis:'Full Fee / >200% FPL Full Fee',
+    source:'https://www.yavapaiaz.gov/files/sharedassets/public/v/1/resident-services/community-health/documents/fee-schedule-dental-1.pdf',
+    location:'https://www.yavapaiaz.gov/Resident-Services/Health-Services/Community-Health-Center-of-Yavapai',
+    note:'Official county 2026 dental fee schedule effective 8/1/2025. Current CHCY provider roster confirms dentists providing services in Cottonwood. Only target codes visible and verifiable in the official indexed schedule are admitted; D0330 is left blank.',
+    prices:{D0150:132,D0180:139,D0210:185,D0274:90}
   }
 ];
 
