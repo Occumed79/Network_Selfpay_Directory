@@ -1,0 +1,32 @@
+{
+  "batch": "2026-08-30-beast-mode-12",
+  "status": "VERIFIED_PENDING_NEON",
+  "reason_pending": "Neon MCP write endpoint remains blocked by connector schema mismatch; verified records are preserved in GitHub until database writes recover.",
+  "target_codes": ["D0150", "D0180", "D0210", "D0274", "D0330"],
+  "summary": {
+    "new_physical_clinics": 1,
+    "new_exact_price_points": 4,
+    "states": ["IN"]
+  },
+  "records": [
+    {
+      "registry_id": "IN-LAKE-GARY-IUN-DENTAL-EDUCATION",
+      "clinic_name": "Indiana University Northwest Dental Education Clinic",
+      "state": "IN",
+      "city": "Gary",
+      "zip": "46408",
+      "address": "Dunes Medical/Professional Building, 3400 Broadway, Gary, IN 46408",
+      "phone": "219-980-6772",
+      "clinic_type": "University dental education / dental hygiene clinic",
+      "source_year": 2026,
+      "freshness": "CURRENT",
+      "evidence_grade": "A",
+      "price_basis": "IU Northwest provider-published Clinic Fees",
+      "pricing_source_url": "https://northwest.iu.edu/dental-clinic/services-fees/index.html",
+      "location_url": "https://northwest.iu.edu/dental/contact/index.html",
+      "supporting_source_url": "https://northwest.iu.edu/dental-clinic/policies/index.html",
+      "prices": {"D0150":15.00,"D0180":null,"D0210":30.00,"D0274":17.00,"D0330":30.00},
+      "note": "Current university clinic fee page lists exact CDT-coded patient charges and states the clinic accepts cash, check, and major credit cards. Current policy page confirms services are provided to the public by supervised students and payment is required at the initial appointment. D0180 is not listed and is intentionally null."
+    }
+  ]
+}
