@@ -5,7 +5,7 @@
   "type": "module",
   "description": "Occu-Med national self-pay pricing registry",
   "scripts": {
-    "start": "node server.js"
+    "start": "node db/seed-beast-wave-2026-08-29.js && node server.js"
   },
   "engines": {
     "node": ">=20"
