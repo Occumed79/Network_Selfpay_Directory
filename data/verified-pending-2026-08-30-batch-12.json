@@ -4,9 +4,9 @@
   "reason_pending": "Neon MCP write endpoint remains blocked by connector schema mismatch; verified records are preserved in GitHub until database writes recover.",
   "target_codes": ["D0150", "D0180", "D0210", "D0274", "D0330"],
   "summary": {
-    "new_physical_clinics": 1,
-    "new_exact_price_points": 4,
-    "states": ["IN"]
+    "new_physical_clinics": 2,
+    "new_exact_price_points": 8,
+    "states": ["IN", "NC"]
   },
   "records": [
     {
@@ -27,6 +27,29 @@
       "supporting_source_url": "https://northwest.iu.edu/dental-clinic/policies/index.html",
       "prices": {"D0150":15.00,"D0180":null,"D0210":30.00,"D0274":17.00,"D0330":30.00},
       "note": "Current university clinic fee page lists exact CDT-coded patient charges and states the clinic accepts cash, check, and major credit cards. Current policy page confirms services are provided to the public by supervised students and payment is required at the initial appointment. D0180 is not listed and is intentionally null."
+    },
+    {
+      "registry_id": "NC-ORANGE-HILLSBOROUGH-HD-DENTAL",
+      "clinic_name": "Orange County Health Department Dental Clinic - Hillsborough",
+      "state": "NC",
+      "city": "Hillsborough",
+      "zip": "27278",
+      "address": "Whitted Human Services Center, 300 West Tryon Street, Hillsborough, NC 27278",
+      "phone": "919-245-2435",
+      "clinic_type": "County public health dental clinic",
+      "source_year": 2024,
+      "freshness": "REFRESH",
+      "evidence_grade": "A-",
+      "price_basis": "Orange County Health Department provider fee schedule, Sept. 1 Fee column from September 2024 update",
+      "pricing_source_url": "https://orangecountync.gov/DocumentCenter/View/28625",
+      "location_url": "https://orangecountync.gov/818/Dental-Clinic",
+      "supporting_source_url": "https://orangecountync.gov/FormCenter/Health-6/Dental-Health-Services-Clinic-Policy-408",
+      "prices": {"D0150":96.00,"D0180":null,"D0210":144.00,"D0274":69.60,"D0330":100.00},
+      "note": "Current county clinic page confirms the fixed Hillsborough dental clinic remains active and serves residents of all ages. Current clinic policy explicitly addresses patients without dental insurance and states patients lacking required insurance information are charged as self-pay. Exact per-code values come from the September 2024 provider fee update and are therefore tagged REFRESH rather than represented as FY2026-27 pricing. D0180 is not listed and is intentionally null."
     }
+  ],
+  "held_or_rejected": [
+    {"name":"Craven County Smile Mobile, NC","reason":"FY2026-27 FINAL county schedule provides valid current target-code charges and current pages explicitly accept self-pay, but the dental operation is a mobile unit that moves among schools and community locations. Held rather than falsely pinning a mobile provider to the Health Department administrative address."},
+    {"name":"Portland State University SHAC Dental Service, OR","reason":"Current fees effective 7/1/2026 are published as ranges for all target codes; registry scalar schema does not permit forcing a midpoint or arbitrary endpoint."}
   ]
 }
