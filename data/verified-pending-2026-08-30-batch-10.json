@@ -1,0 +1,91 @@
+{
+  "batch": "2026-08-30-beast-mode-10",
+  "status": "VERIFIED_PENDING_NEON",
+  "reason_pending": "Neon MCP write endpoint remains blocked by connector schema mismatch; verified records are preserved in GitHub until database writes recover.",
+  "target_codes": ["D0150", "D0180", "D0210", "D0274", "D0330"],
+  "summary": {
+    "new_physical_clinics": 4,
+    "new_exact_price_points": 12,
+    "states": ["CO", "FL"]
+  },
+  "records": [
+    {
+      "registry_id": "FL-PALM-BEACH-BOCA-DENTAL",
+      "clinic_name": "Boca Dental",
+      "state": "FL",
+      "city": "Boca Raton",
+      "zip": "33431",
+      "address": "950 Glades Rd, Boca Raton, FL 33431",
+      "phone": "561-391-6606",
+      "clinic_type": "Private dental practice",
+      "source_year": 2026,
+      "freshness": "CURRENT",
+      "evidence_grade": "A",
+      "price_basis": "Provider-published Standard Fees column; VIP/member pricing excluded",
+      "pricing_source_url": "https://bocadental.com/patient-info/dental-financing/vip-dental-plan/",
+      "location_url": "https://bocadental.com/contact/",
+      "prices": {"D0150":85.00,"D0180":null,"D0210":null,"D0274":66.00,"D0330":115.00},
+      "note": "Direct practice page separates Standard Fees from VIP/member fees. Only Standard Fees are used. D0180 and D0210 are not listed in the published diagnostic table and are intentionally null. Current practice site is copyright 2026."
+    },
+    {
+      "registry_id": "FL-BREVARD-MELBOURNE-VIERA-DDS",
+      "clinic_name": "Viera Dental Design Studio",
+      "state": "FL",
+      "city": "Melbourne",
+      "zip": "32940",
+      "address": "7185 Murrell Rd #102, Melbourne, FL 32940",
+      "phone": "321-379-5756",
+      "clinic_type": "Private dental practice",
+      "source_year": 2026,
+      "freshness": "CURRENT",
+      "evidence_grade": "A",
+      "price_basis": "Provider-published standard office fees / Regular column; D3P membership and PPO 'As Low As' values excluded",
+      "pricing_source_url": "https://vieradentistry.com/fees/",
+      "supporting_source_url": "https://vieradentistry.com/d3p/",
+      "location_url": "https://vieradentistry.com/contact/",
+      "prices": {"D0150":140.00,"D0180":null,"D0210":null,"D0274":95.00,"D0330":170.00},
+      "note": "Practice explicitly states listed fees are standard office fees and separately identifies discounted D3P/member or PPO amounts. Only standard/regular amounts are used. D0180 and D0210 are not individually listed and are intentionally null."
+    },
+    {
+      "registry_id": "CO-LARIMER-FORT-COLLINS-MOUNTAIN-KIDS",
+      "clinic_name": "Mountain Kids Pediatric Dentistry",
+      "state": "CO",
+      "city": "Fort Collins",
+      "zip": "80525",
+      "address": "260 E Horsetooth Road, Fort Collins, CO 80525",
+      "phone": "970-224-3600",
+      "clinic_type": "Private pediatric dental practice",
+      "source_year": 2026,
+      "freshness": "CURRENT",
+      "evidence_grade": "A",
+      "price_basis": "Provider-published Mountain Kids Office Fees",
+      "pricing_source_url": "https://mountainkidspediatricdentistry.com/faqs/",
+      "location_url": "https://mountainkidspediatricdentistry.com/contact/",
+      "prices": {"D0150":117.00,"D0180":null,"D0210":null,"D0274":null,"D0330":152.00},
+      "note": "Current 2026 provider FAQ publishes these office fees directly. It lists D0272 but not D0274; registry does not infer a four-bitewing fee from the two-bitewing charge. D0180 and D0210 are also absent and intentionally null."
+    },
+    {
+      "registry_id": "CO-DENVER-KREIDER-FAMILY-DENTAL",
+      "clinic_name": "Kreider Family Dental",
+      "state": "CO",
+      "city": "Denver",
+      "zip": "80209",
+      "address": "3955 E Exposition Ave, Suite 312, Denver, CO 80209",
+      "phone": "303-744-3636",
+      "clinic_type": "Private dental practice",
+      "source_year": 2026,
+      "freshness": "CURRENT",
+      "evidence_grade": "A",
+      "price_basis": "Provider-published 2026 Treatment Fee Disclosure identified by the practice as cash-pay prices",
+      "pricing_source_url": "https://www.kreiderfamilydentistry.com/services-7",
+      "location_url": "https://www.kreiderfamilydentistry.com/services-7",
+      "prices": {"D0150":139.00,"D0180":null,"D0210":206.00,"D0274":103.00,"D0330":177.00},
+      "note": "Direct 2026 practice cash-pay disclosure. D0180 is not among the published services and is intentionally null."
+    }
+  ],
+  "held_or_rejected": [
+    {"name":"Cleveland County Health Department Dental Clinic, NC","reason":"Latest exact indexed dental charges are from FY2025-26; FY2026-27 budget is adopted but current dental fee rows were not verified. Held rather than mislabeled CURRENT."},
+    {"name":"Union County Public Health Dental Clinic, NC","reason":"Latest exact indexed dental table is the prior adopted fiscal year. Current clinic and standard-fee billing policy are verified, but exact FY2026-27 rows are not yet verified."},
+    {"name":"Portland State University SHAC Dental Service","reason":"Current fees effective 7/1/2026 are published as ranges for target codes. Registry scalar schema does not permit forcing a midpoint or arbitrary endpoint."}
+  ]
+}
