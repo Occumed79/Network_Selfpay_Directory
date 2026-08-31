@@ -4,9 +4,9 @@
   "reason_pending": "Neon MCP write endpoint remains blocked by connector schema mismatch; verified records are preserved in GitHub until database writes recover.",
   "target_codes": ["D0150", "D0180", "D0210", "D0274", "D0330"],
   "summary": {
-    "new_physical_clinics": 5,
-    "new_exact_price_points": 16,
-    "states": ["CA", "MI", "NY"]
+    "new_physical_clinics": 4,
+    "new_exact_price_points": 12,
+    "states": ["MI", "NY"]
   },
   "records": [
     {
@@ -80,27 +80,10 @@
       "location_url": "https://vbcassdhd.org/about/locations/",
       "prices": {"D0150":47.00,"D0180":null,"D0210":85.00,"D0274":40.00,"D0330":75.00},
       "note": "The December 2025 board packet separately labels the 2026 figures as proposed. Registry policy therefore uses only the established Standard fees Updated 7.14.25 column and excludes all proposed values. D0180 has no established standard fee in that column and is intentionally null. Current district pages confirm active dental care at Dowagiac for all ages, including self-pay/sliding-fee access."
-    },
-    {
-      "registry_id": "CA-PLACER-GRANITE-BAY-BOARDWALK-DENTISTRY",
-      "clinic_name": "Boardwalk Dentistry",
-      "state": "CA",
-      "city": "Granite Bay",
-      "zip": "95746",
-      "address": "7005 Boardwalk Drive, Suite 100, Granite Bay, CA 95746",
-      "phone": "916-791-4646",
-      "clinic_type": "Private dental practice",
-      "source_year": 2026,
-      "freshness": "CURRENT",
-      "evidence_grade": "A",
-      "price_basis": "Provider-published standard service fees; no membership required",
-      "pricing_source_url": "https://granitebaydentist.com/service-fees/",
-      "location_url": "https://granitebaydentist.com/service-fees/",
-      "prices": {"D0150":116.00,"D0180":null,"D0210":178.00,"D0274":90.00,"D0330":128.00},
-      "note": "Practice states these are standard fees, no membership is required, and the displayed fees are current through June 30, 2027. D0180 is not listed and is intentionally null."
     }
   ],
   "rejected_or_held": [
+    {"name":"Boardwalk Dentistry","reason":"Removed from Batch 07 after hard dedupe; already present in Batch 02 under registry_id CA-PLACER-GRANITE-BAY-BOARDWALK."},
     {"name":"SIU Medicine FQHC dental","reason":"Current provider page links a 2025 dental sliding-scale schedule, but the exact 2025 target-code full-fee table was not retrievable; older 2023 values withheld pending current verification."},
     {"name":"Aviva Health dental","reason":"Current 2025 provider sliding-fee document confirms private pay equals full fee but contains only percentage tiers, not exact target-code full fees."},
     {"name":"Carteret County NC Dental Program","reason":"Current fee schedule contains exact dental codes but program primarily operates through a mobile school dental unit; held pending a defensible physical-location mapping rather than pinning mobile service to an administrative address."},
