@@ -1,0 +1,74 @@
+{
+  "batch": "2026-08-31-beast-mode-12",
+  "status": "VERIFIED_PENDING_NEON",
+  "reason_pending": "Neon MCP write endpoint remains blocked by connector schema mismatch; verified records are preserved in GitHub until database writes recover.",
+  "target_codes": ["D0150", "D0180", "D0210", "D0274", "D0330"],
+  "summary": {
+    "new_physical_clinics": 3,
+    "new_exact_price_points": 4,
+    "states": ["FL", "ID", "TX"]
+  },
+  "records": [
+    {
+      "registry_id": "ID-BANNOCK-POCATELLO-PORTNEUF-VALLEY",
+      "clinic_name": "Portneuf Valley Dental",
+      "state": "ID",
+      "city": "Pocatello",
+      "zip": "83201",
+      "address": "1246 Yellowstone Ave Suite D3, Pocatello, ID 83201",
+      "phone": "208-238-0125",
+      "clinic_type": "Private dental practice",
+      "source_year": 2026,
+      "freshness": "CURRENT",
+      "evidence_grade": "A",
+      "price_basis": "Provider-published Office Fees; component prices explicitly itemized by dental code",
+      "pricing_source_url": "https://www.portneufvalleydental.com/financial/office-fees/",
+      "location_url": "https://www.portneufvalleydental.com/financial/office-fees/",
+      "prices": {"D0150":99.00,"D0180":null,"D0210":264.00,"D0274":null,"D0330":null},
+      "note": "The provider's preventive-care row names a bundled visit but explicitly itemizes each component by code: 1110 $103, 0150 $99, 0210 $264, 1206 $47. Because D0150 and D0210 are individually assigned amounts, they are valid scalar entries rather than a bundle split. D0180, D0274, and D0330 are not listed and remain null. Page is current through 2026."
+    },
+    {
+      "registry_id": "FL-HILLSBOROUGH-TAMPA-RACE-TRACK-SMILES",
+      "clinic_name": "Race Track Smiles",
+      "state": "FL",
+      "city": "Tampa",
+      "zip": "33635",
+      "address": "8991 Race Track Rd, Tampa, FL 33635",
+      "phone": "813-818-8054",
+      "clinic_type": "Private dental practice",
+      "source_year": 2026,
+      "freshness": "CURRENT",
+      "evidence_grade": "A",
+      "price_basis": "Provider-published standard Cost column; Triple Crown Savings Program discounted column excluded",
+      "pricing_source_url": "https://racetrackdental.com/financial/office-fees/",
+      "location_url": "https://racetrackdental.com/financial/office-fees/",
+      "prices": {"D0150":null,"D0180":129.00,"D0210":null,"D0274":null,"D0330":null},
+      "note": "The direct office-fee table lists Comprehensive Periodontal Exam D0180 at a standard cost of $129 and separately lists a $103 savings-program price; only the standard cost is used. D0150 is shown only within a $120-$193 range shared with D0160, so it is intentionally null. Digital x-rays are also published only as an un-coded range and are not mapped to target radiograph codes."
+    },
+    {
+      "registry_id": "TX-HARRIS-HOUSTON-PEARL-SHINE",
+      "clinic_name": "Pearl Shine Dental",
+      "state": "TX",
+      "city": "Houston",
+      "zip": "77070",
+      "address": "12220 Jones Rd Suite C, Houston, TX 77070",
+      "phone": "281-336-1440",
+      "clinic_type": "Private dental practice",
+      "source_year": 2026,
+      "freshness": "CURRENT",
+      "evidence_grade": "A-",
+      "price_basis": "Provider-published Preventative Care Fees; self-pay options explicitly supported",
+      "pricing_source_url": "https://pearlshinedentalclinic.com/office-fees/",
+      "location_url": "https://pearlshinedentalclinic.com/office-fees/",
+      "prices": {"D0150":79.00,"D0180":null,"D0210":null,"D0274":null,"D0330":null},
+      "note": "The practice states the office-fee page is intended for patients with insurance or who prefer self-pay. Comprehensive Exam D0150 is individually priced at $79. The separate cleaning/exam/full-x-ray range is not used, and the generic x-ray range is not assigned to any target radiograph code."
+    }
+  ],
+  "rejected_or_held": [
+    {"name":"Kaneohe Smile Center, HI","reason":"Normal office fees are listed by service description, but the current page does not explicitly map the normal-fee values to each target CDT code strongly enough for this registry's exact-code standard."},
+    {"name":"Lakeside Dental and Wellness, KS","reason":"Current page assigns a single bundled cleaning/exam/full-series/fluoride amount to D0150 rather than individually pricing D0150; bundle not treated as comprehensive-exam scalar."},
+    {"name":"The Dentist of Siouxland, SD","reason":"Current page publishes D0150 only as a bundled cleaning/exam/full-series/fluoride charge; component target-code prices are not individually exposed."},
+    {"name":"Montana, Oklahoma, North Dakota, South Dakota Medicaid schedules","reason":"Government reimbursement/maximum-allowable fee schedules are not provider self-pay patient charges."},
+    {"name":"Arkansas Blue Cross 2026 PPO schedule","reason":"Insurer PPO fee schedule, not unrestricted provider self-pay pricing."}
+  ]
+}
