@@ -4,9 +4,9 @@
   "reason_pending": "Neon database writes remain pending; verified records are preserved in GitHub until database writes recover.",
   "target_codes": ["D0150", "D0180", "D0210", "D0274", "D0330"],
   "summary": {
-    "new_physical_clinics": 5,
-    "new_exact_price_points": 11,
-    "states": ["NC", "NY", "OK", "TX"]
+    "new_physical_clinics": 3,
+    "new_exact_price_points": 7,
+    "states": ["NC", "OK", "TX"]
   },
   "records": [
     {
@@ -47,42 +47,6 @@
       "note": "Provider document explicitly states the amounts represent self-pay patient costs, are separate from Medicaid/Medicare/private-insurance amounts, and will be updated annually. The undiscounted/highest self-pay column is used. A current regional provider list places FHCSO under DENTIST at the Tishomingo address. Other FHCSO locations are not fanned out without site-level dental confirmation."
     },
     {
-      "registry_id": "NY-KINGS-BROOKLYN-BMS-BRISTOL-DENTAL",
-      "clinic_name": "BMS@Bristol Dental",
-      "state": "NY",
-      "city": "Brooklyn",
-      "zip": "11212",
-      "address": "259 Bristol Street, 1st and 3rd Floor, Brooklyn, NY 11212",
-      "phone": "718-345-5000",
-      "clinic_type": "FQHC / Community Health Center dental clinic",
-      "source_year": 2026,
-      "freshness": "CURRENT",
-      "evidence_grade": "A",
-      "price_basis": "BMS 2026 Sliding Fee Discount dental table, full-fee 0%-discount Column G",
-      "pricing_source_url": "https://bmsfamilyhealth.org/sliding-fee-schedule-2/",
-      "location_url": "https://bmsfamilyhealth.org/locations/",
-      "prices": {"D0150": 78.00, "D0180": 63.00, "D0210": null, "D0274": null, "D0330": null},
-      "note": "BMS states patients above 200% FPL and patients without sliding-fee documentation are charged full fee. D0150 is explicitly included on the D0120/D0150 detailed-oral-evaluation row at $78 and D0180 is separately listed at $63. Current location page explicitly labels Bristol as Medical and Dental."
-    },
-    {
-      "registry_id": "NY-KINGS-BROOKLYN-BMS-ASHFORD-DENTAL",
-      "clinic_name": "BMS@Ashford Dental",
-      "state": "NY",
-      "city": "Brooklyn",
-      "zip": "11207",
-      "address": "650 Ashford Street, Brooklyn, NY 11207",
-      "phone": "718-345-5000",
-      "clinic_type": "FQHC / Community Health Center dental clinic",
-      "source_year": 2026,
-      "freshness": "CURRENT",
-      "evidence_grade": "A",
-      "price_basis": "BMS 2026 Sliding Fee Discount dental table, full-fee 0%-discount Column G",
-      "pricing_source_url": "https://bmsfamilyhealth.org/sliding-fee-schedule-2/",
-      "location_url": "https://bmsfamilyhealth.org/locations/",
-      "prices": {"D0150": 78.00, "D0180": 63.00, "D0210": null, "D0274": null, "D0330": null},
-      "note": "BMS states patients above 200% FPL and patients without sliding-fee documentation are charged full fee. D0150 is explicitly included on the D0120/D0150 detailed-oral-evaluation row at $78 and D0180 is separately listed at $63. Current location page explicitly labels Ashford as Medical and Dental."
-    },
-    {
       "registry_id": "TX-ELLIS-FERRIS-FAMILY-DENTISTRY",
       "clinic_name": "Ferris Family Dentistry",
       "state": "TX",
@@ -103,6 +67,8 @@
     }
   ],
   "held_or_rejected": [
+    {"name": "BMS@Bristol Dental, Brooklyn NY", "reason": "Removed during hard dedupe because the same physical dental site and 2026 fees were already committed in 2026-08-30 Batch 07."},
+    {"name": "BMS@Ashford Dental, Brooklyn NY", "reason": "Removed during hard dedupe because the same physical dental site and 2026 fees were already committed in 2026-08-30 Batch 07."},
     {"name": "Community Health Center of Snohomish County, WA", "reason": "Provider disclosure labels target-code amounts as maximum prices and states actual prices may be less; held rather than treating a maximum as a fixed self-pay charge."},
     {"name": "OASIS Modern Dentistry, Houston TX", "reason": "Published self-pay values are tied to a savings-plan membership; membership pricing is excluded."},
     {"name": "Eastern International College dental clinic, NJ", "reason": "Current manual groups multiple radiograph codes under one aggregate fee and does not expose code-specific scalar amounts; no split or inference."},
