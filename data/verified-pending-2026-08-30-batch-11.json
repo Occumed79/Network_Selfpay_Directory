@@ -4,9 +4,9 @@
   "reason_pending": "Neon MCP write endpoint remains blocked by connector schema mismatch; verified records are preserved in GitHub until database writes recover.",
   "target_codes": ["D0150", "D0180", "D0210", "D0274", "D0330"],
   "summary": {
-    "new_physical_clinics": 3,
-    "new_exact_price_points": 6,
-    "states": ["CO"]
+    "new_physical_clinics": 6,
+    "new_exact_price_points": 15,
+    "states": ["CO", "ID", "MA", "TX"]
   },
   "records": [
     {
@@ -62,11 +62,71 @@
       "location_url": "https://www.kidsrockdentistry.com/financial-information/",
       "prices": {"D0150":126.00,"D0180":null,"D0210":null,"D0274":null,"D0330":157.00},
       "note": "The same current provider pricing page explicitly lists this physical location. Only target codes directly present in the Top 15 Office Codes and Prices are entered; D0180, D0210, and D0274 are absent and intentionally null."
+    },
+    {
+      "registry_id": "MA-MIDDLESEX-LITTLETON-NASHOBA-FAMILY",
+      "clinic_name": "Nashoba Family Dentists",
+      "state": "MA",
+      "city": "Littleton",
+      "zip": "01460",
+      "address": "256 Great Road, Suite 5, Littleton, MA 01460",
+      "phone": "978-486-8261",
+      "clinic_type": "Private dental practice",
+      "source_year": 2026,
+      "freshness": "CURRENT",
+      "evidence_grade": "A",
+      "price_basis": "Provider-published Office Fees",
+      "pricing_source_url": "https://www.nashobafamilydentists.com/financial/office-fees/",
+      "location_url": "https://www.nashobafamilydentists.com/financial/office-fees/",
+      "prices": {"D0150":130.00,"D0180":159.00,"D0210":186.00,"D0274":95.00,"D0330":191.00},
+      "note": "Direct current provider office-fee page. This is a distinct Littleton practice not represented among the Massachusetts practices in Batch 03."
+    },
+    {
+      "registry_id": "ID-BANNOCK-POCATELLO-PORTNEUF-VALLEY",
+      "clinic_name": "Portneuf Valley Dental",
+      "state": "ID",
+      "city": "Pocatello",
+      "zip": "83201",
+      "address": "1246 Yellowstone Ave, Suite D3, Pocatello, ID 83201",
+      "phone": "208-238-0125",
+      "clinic_type": "Private dental practice",
+      "source_year": 2026,
+      "freshness": "CURRENT",
+      "evidence_grade": "A",
+      "price_basis": "Provider-published Office Fees; individually itemized CDT component prices",
+      "pricing_source_url": "https://www.portneufvalleydental.com/financial/office-fees/",
+      "location_url": "https://www.portneufvalleydental.com/financial/office-fees/",
+      "prices": {"D0150":99.00,"D0180":null,"D0210":264.00,"D0274":null,"D0330":null},
+      "note": "Provider page separately itemizes D0150 and D0210 dollar amounts within its preventive-care pricing line. No amount is inferred for target codes not separately itemized."
+    },
+    {
+      "registry_id": "TX-HARRIS-HOUSTON-OASIS-MODERN",
+      "clinic_name": "OASIS Modern Dentistry & Orthodontics",
+      "state": "TX",
+      "city": "Houston",
+      "zip": "77070",
+      "address": "10211 Cypresswood Dr, Suite 500, Houston, TX 77070",
+      "phone": "832-384-4455",
+      "clinic_type": "Private dental practice",
+      "source_year": 2026,
+      "freshness": "CURRENT",
+      "evidence_grade": "A",
+      "price_basis": "Provider-published OASIS Self-Pay column for patients without dental insurance",
+      "pricing_source_url": "https://oasismoderndentistry.com/office-fees/",
+      "location_url": "https://oasismoderndentistry.com/office-fees/",
+      "prices": {"D0150":null,"D0180":null,"D0210":null,"D0274":30.00,"D0330":65.00},
+      "note": "Practice explicitly states the published self-pay prices are for patients without dental insurance. Only exact itemized CDT rows from the self-pay column are used. The separate New Patient Special is excluded and is not mapped to D0150."
     }
   ],
   "rejected_or_held": [
     {"name":"Four Corners Dental & Dentures, Durango CO","reason":"Current provider page publishes plain-language 4 BiteWing and Pano prices but does not attach exact CDT codes; registry does not infer D0274 or D0330 from unlabeled descriptions."},
     {"name":"Timmons Dental","reason":"Provider publishes bundled preventive/new-patient prices containing multiple CDT codes but does not expose separate regular per-code target values; bundle not split."},
-    {"name":"Midwest Oral & Maxillofacial Surgery","reason":"Published prices are membership-plan focused and new-patient imaging is bundled across multiple codes; no individual unrestricted target-code values extracted."}
+    {"name":"Midwest Oral & Maxillofacial Surgery","reason":"Published prices are membership-plan focused and new-patient imaging is bundled across multiple codes; no individual unrestricted target-code values extracted."},
+    {"name":"Love Dental AZ","reason":"Current page exposes a bundled new-patient special but not exact target-code prices; bundle not split."},
+    {"name":"Artistic Dentistry Arizona","reason":"Published preventive pricing is a bundled range associated with D0150 rather than a fixed per-code charge; no scalar value entered."},
+    {"name":"Tucson Dental Studio","reason":"D0150 and D0210 appear inside a single combined package price without separate component charges; package not split."},
+    {"name":"Buchanan Dentistry - North Las Vegas","reason":"Target codes appear inside a multi-service bundle without separate regular per-code prices; bundle not split."},
+    {"name":"Coast Dental current promotion","reason":"Pricing is presented in a new-patient promotional context and is excluded by registry policy."},
+    {"name":"Government Medicaid/EIP dental fee schedules","reason":"Payer reimbursement or maximum-allowance schedules are not provider self-pay charges."}
   ]
 }
