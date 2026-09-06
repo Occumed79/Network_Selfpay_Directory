@@ -4,9 +4,9 @@
   "reason_pending": "Neon MCP write endpoint remains blocked by connector schema mismatch; verified records are preserved in GitHub until database writes recover.",
   "target_codes": ["D0150", "D0180", "D0210", "D0274", "D0330"],
   "summary": {
-    "new_physical_clinics": 2,
-    "new_exact_price_points": 8,
-    "states": ["IN", "NC"]
+    "new_physical_clinics": 3,
+    "new_exact_price_points": 11,
+    "states": ["AK", "IN", "NC"]
   },
   "records": [
     {
@@ -46,10 +46,32 @@
       "supporting_source_url": "https://orangecountync.gov/FormCenter/Health-6/Dental-Health-Services-Clinic-Policy-408",
       "prices": {"D0150":96.00,"D0180":null,"D0210":144.00,"D0274":69.60,"D0330":100.00},
       "note": "Current county clinic page confirms the fixed Hillsborough dental clinic remains active and serves residents of all ages. Current clinic policy explicitly addresses patients without dental insurance and states patients lacking required insurance information are charged as self-pay. Exact per-code values come from the September 2024 provider fee update and are therefore tagged REFRESH rather than represented as FY2026-27 pricing. D0180 is not listed and is intentionally null."
+    },
+    {
+      "registry_id": "AK-ANCHORAGE-ANHC-DENTAL",
+      "clinic_name": "Anchorage Neighborhood Health Center Dental Clinic",
+      "state": "AK",
+      "city": "Anchorage",
+      "zip": "99503",
+      "address": "4951 Business Park Blvd, Anchorage, AK 99503",
+      "phone": "907-743-7202",
+      "clinic_type": "FQHC / Community Health Center dental clinic",
+      "source_year": 2026,
+      "freshness": "CURRENT",
+      "evidence_grade": "A",
+      "price_basis": "Provider-published 2026 Prices of Common Services, undiscounted rate",
+      "pricing_source_url": "https://www.anhc.org/prices",
+      "location_url": "https://www.anhc.org/services-dental",
+      "supporting_source_url": "https://www.anhc.org/contact",
+      "prices": {"D0150":175.00,"D0180":null,"D0210":null,"D0274":111.00,"D0330":188.00},
+      "note": "ANHC explicitly labels the posted amount as the undiscounted rate and publishes distinct 2026 prices. Sliding-fee discounts and insurance benefits may reduce actual patient payment. Current dental and contact pages confirm the fixed Anchorage clinic and dedicated dental line. D0180 and D0210 are not listed among the provider's published common dental services and are intentionally null."
     }
   ],
   "held_or_rejected": [
     {"name":"Craven County Smile Mobile, NC","reason":"FY2026-27 FINAL county schedule provides valid current target-code charges and current pages explicitly accept self-pay, but the dental operation is a mobile unit that moves among schools and community locations. Held rather than falsely pinning a mobile provider to the Health Department administrative address."},
-    {"name":"Portland State University SHAC Dental Service, OR","reason":"Current fees effective 7/1/2026 are published as ranges for all target codes; registry scalar schema does not permit forcing a midpoint or arbitrary endpoint."}
+    {"name":"Portland State University SHAC Dental Service, OR","reason":"Current fees effective 7/1/2026 are published as ranges for all target codes; registry scalar schema does not permit forcing a midpoint or arbitrary endpoint."},
+    {"name":"Broad Top Area Medical Center, PA","reason":"Provider currently links a Dental Self-Pay & Prompt-Pay Discount Schedule, but the provider-hosted PDF endpoint repeatedly returns a cache-miss error. Exact target-code values were not guessed or substituted."},
+    {"name":"Cabarrus Health Alliance dental clinics, NC","reason":"Two fixed dental clinics are current, but CHA announced a July 1, 2026 dental fee increase and the post-increase exact CDT table has not been verified. Older fees withheld."},
+    {"name":"Guilford County dental clinics, NC","reason":"FY2027 adopted budget is current, but exact dental target-code rows have not been exposed cleanly enough to certify. Older FY2026 values withheld."}
   ]
 }
