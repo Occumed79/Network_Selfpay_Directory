@@ -4,9 +4,9 @@
   "reason_pending": "Neon MCP write endpoint remains blocked by connector schema mismatch; verified records are preserved in GitHub until database writes recover.",
   "target_codes": ["D0150", "D0180", "D0210", "D0274", "D0330"],
   "summary": {
-    "new_physical_clinics": 5,
-    "new_exact_price_points": 10,
-    "states": ["CT", "MA", "MO", "NJ", "WI"]
+    "new_physical_clinics": 4,
+    "new_exact_price_points": 5,
+    "states": ["CT", "MO", "NJ", "WI"]
   },
   "records": [
     {
@@ -46,24 +46,6 @@
       "note": "Direct current provider fee page. The $540 preventive package groups D1110/D0150/D0210/D1206 and is deliberately not split into component prices. D0274 is individually priced at $98 and is the only target-code scalar entered."
     },
     {
-      "registry_id": "MA-MIDDLESEX-LITTLETON-NASHOBA-FAMILY",
-      "clinic_name": "Nashoba Family Dentists",
-      "state": "MA",
-      "city": "Littleton",
-      "zip": "01460",
-      "address": "256 Great Road, Suite 5, Littleton, MA 01460",
-      "phone": "978-486-8261",
-      "clinic_type": "Private dental practice",
-      "source_year": 2026,
-      "freshness": "CURRENT",
-      "evidence_grade": "A",
-      "price_basis": "Provider-published Office Fees",
-      "pricing_source_url": "https://www.nashobafamilydentists.com/financial/office-fees/",
-      "location_url": "https://www.nashobafamilydentists.com/financial/office-fees/",
-      "prices": {"D0150":130.00,"D0180":159.00,"D0210":186.00,"D0274":95.00,"D0330":191.00},
-      "note": "Direct provider office-fee page with all five target codes individually priced. Same fee family as several previously verified Massachusetts practices, but this is a separate physical practice/location not present in prior batches."
-    },
-    {
       "registry_id": "WI-MONROE-TOMAH-DEER-CREEK",
       "clinic_name": "Deer Creek Dental Clinic",
       "state": "WI",
@@ -101,6 +83,7 @@
     }
   ],
   "rejected_or_held": [
+    {"name":"Nashoba Family Dentists, MA","reason":"Removed during hard dedupe because the same physical practice and five prices were already committed in 2026-08-30 Batch 11."},
     {"name":"Moorehead Dentistry - Ohio locations","reason":"Current office-fee page labels a bundled cleaning/exam/full-series/fluoride range as D0150 and does not individually publish target radiograph codes; bundle not split."},
     {"name":"Westar Dental - Westerville, OH","reason":"Provider explicitly says fees are what patients pay without insurance, but target D0150 is published only as a $0-$395 bundled/range new-patient visit and target radiograph codes are not individually listed; scalar registry entry withheld."},
     {"name":"Friendly Dental - Aberdeen, NJ","reason":"The $475 preventive amount is a bundled cleaning/exam/full-series/fluoride service labeled D0150 rather than an individually priced comprehensive exam; not used as a scalar D0150 value."},
