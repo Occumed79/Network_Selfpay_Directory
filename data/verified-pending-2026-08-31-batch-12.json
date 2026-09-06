@@ -4,29 +4,11 @@
   "reason_pending": "Neon MCP write endpoint remains blocked by connector schema mismatch; verified records are preserved in GitHub until database writes recover.",
   "target_codes": ["D0150", "D0180", "D0210", "D0274", "D0330"],
   "summary": {
-    "new_physical_clinics": 3,
-    "new_exact_price_points": 4,
-    "states": ["FL", "ID", "TX"]
+    "new_physical_clinics": 2,
+    "new_exact_price_points": 2,
+    "states": ["FL", "TX"]
   },
   "records": [
-    {
-      "registry_id": "ID-BANNOCK-POCATELLO-PORTNEUF-VALLEY",
-      "clinic_name": "Portneuf Valley Dental",
-      "state": "ID",
-      "city": "Pocatello",
-      "zip": "83201",
-      "address": "1246 Yellowstone Ave Suite D3, Pocatello, ID 83201",
-      "phone": "208-238-0125",
-      "clinic_type": "Private dental practice",
-      "source_year": 2026,
-      "freshness": "CURRENT",
-      "evidence_grade": "A",
-      "price_basis": "Provider-published Office Fees; component prices explicitly itemized by dental code",
-      "pricing_source_url": "https://www.portneufvalleydental.com/financial/office-fees/",
-      "location_url": "https://www.portneufvalleydental.com/financial/office-fees/",
-      "prices": {"D0150":99.00,"D0180":null,"D0210":264.00,"D0274":null,"D0330":null},
-      "note": "The provider's preventive-care row names a bundled visit but explicitly itemizes each component by code: 1110 $103, 0150 $99, 0210 $264, 1206 $47. Because D0150 and D0210 are individually assigned amounts, they are valid scalar entries rather than a bundle split. D0180, D0274, and D0330 are not listed and remain null. Page is current through 2026."
-    },
     {
       "registry_id": "FL-HILLSBOROUGH-TAMPA-RACE-TRACK-SMILES",
       "clinic_name": "Race Track Smiles",
@@ -65,6 +47,7 @@
     }
   ],
   "rejected_or_held": [
+    {"name":"Portneuf Valley Dental, ID","reason":"Removed during hard dedupe because the same physical practice and D0150/D0210 prices were already committed in 2026-08-30 Batch 11."},
     {"name":"Kaneohe Smile Center, HI","reason":"Normal office fees are listed by service description, but the current page does not explicitly map the normal-fee values to each target CDT code strongly enough for this registry's exact-code standard."},
     {"name":"Lakeside Dental and Wellness, KS","reason":"Current page assigns a single bundled cleaning/exam/full-series/fluoride amount to D0150 rather than individually pricing D0150; bundle not treated as comprehensive-exam scalar."},
     {"name":"The Dentist of Siouxland, SD","reason":"Current page publishes D0150 only as a bundled cleaning/exam/full-series/fluoride charge; component target-code prices are not individually exposed."},
