@@ -1,0 +1,37 @@
+{
+  "batch": "2026-09-07-beast-mode-21",
+  "status": "VERIFIED_PENDING_NEON",
+  "reason_pending": "Dental schema migration has been prepared and validated on a temporary Neon branch but has not been applied to main pending explicit approval.",
+  "target_codes": ["D0150", "D0180", "D0210", "D0274", "D0330"],
+  "summary": {
+    "new_physical_clinics": 1,
+    "new_exact_price_points": 4,
+    "states": ["CO"]
+  },
+  "records": [
+    {
+      "registry_id": "CO-EL-PASO-FOUNTAIN-FOUNTAIN-DENTAL-CENTER",
+      "clinic_name": "Fountain Dental Center",
+      "state": "CO",
+      "city": "Fountain",
+      "zip": "80817",
+      "address": "8085 Fountain Mesa Rd, Fountain, CO 80817",
+      "phone": "719-382-5500",
+      "clinic_type": "Private general dental practice",
+      "source_year": 2026,
+      "freshness": "CURRENT",
+      "evidence_grade": "A-",
+      "price_basis": "Provider-published Gloss Dental Membership page, undiscounted Original Price column; member prices excluded",
+      "pricing_source_url": "https://fountaindental.com/gloss-dental-membership/",
+      "location_url": "https://fountaindental.com/gloss-dental-membership/",
+      "prices": {"D0150":128.00,"D0180":null,"D0210":182.00,"D0274":90.00,"D0330":156.00},
+      "note": "Current provider page separates each listed procedure's Original Price from the discounted Gloss membership price. Registry uses only the undiscounted Original Price: D0150 $128, D0210 $182, D0274 $90 and D0330 $156. D0180 is not individually listed and remains null. The same provider page confirms the fixed Fountain clinic at 8085 Fountain Mesa Rd and phone 719-382-5500. The separate $125 first-visit cleaning/exam/x-ray special is not used."
+    }
+  ],
+  "held_or_rejected": [
+    {"name":"Kiamichi Family Medical Center fixed Oklahoma sites","reason":"Current dental footprint is verified, but the exact provider self-pay fee source remains an underlying PDF that could not be rendered for required page-level verification."},
+    {"name":"Advanced Brookline Dental, MA and similar preventive-package pages","reason":"Displayed target-code pricing is actually a multi-service bundle; registry does not assign package totals to an individual CDT code."},
+    {"name":"Premier Dental Studio of Katy, TX","reason":"Page states all fees include membership-plan discounts and groups radiograph codes into a shared range, so the values are not clean unrestricted office-price scalars for the target codes."},
+    {"name":"State payer, workers-comp, Medicaid, benefit-plan, benchmark and reimbursement schedules","reason":"Not provider self-pay office pricing."}
+  ]
+}
