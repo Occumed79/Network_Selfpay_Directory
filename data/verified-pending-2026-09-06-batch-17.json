@@ -1,0 +1,39 @@
+{
+  "batch": "2026-09-06-beast-mode-17",
+  "status": "VERIFIED_PENDING_NEON",
+  "reason_pending": "Neon database writes remain pending; verified records are preserved in GitHub until database writes recover.",
+  "target_codes": ["D0150", "D0180", "D0210", "D0274", "D0330"],
+  "summary": {
+    "new_physical_clinics": 1,
+    "new_exact_price_points": 2,
+    "states": ["CO"]
+  },
+  "records": [
+    {
+      "registry_id": "CO-JEFFERSON-LITTLETON-PAGE-DENTAL-ARTS",
+      "clinic_name": "Page Dental Arts",
+      "state": "CO",
+      "city": "Littleton",
+      "zip": "80127",
+      "address": "10026 W. San Juan Way #150, Littleton, CO 80127",
+      "phone": "303-794-4542",
+      "clinic_type": "Private dental practice",
+      "source_year": 2026,
+      "freshness": "CURRENT",
+      "evidence_grade": "A",
+      "price_basis": "Provider-published SB 17-065 List of Common Fees, Standard Fee column, updated February 2026",
+      "pricing_source_url": "https://pagedentalarts.com/patient-resources/common-fees-dental-terms-faqs/",
+      "location_url": "https://pagedentalarts.com/contact-us/",
+      "prices": {"D0150":151.00,"D0180":null,"D0210":null,"D0274":103.00,"D0330":null},
+      "note": "Provider's current 2026 common-fees page explicitly states the fees are individual standard fees published for Colorado SB 17-065 compliance and do not include discounts or insurance write-offs. D0150 and D0274 are the only target codes listed. Current contact page independently confirms the Littleton address, phone and active office hours."
+    }
+  ],
+  "held_or_rejected": [
+    {"name":"Lawton Community Health Center, OK","reason":"Current transparency page explicitly describes self-pay patient costs, but exact dental CDT rows are stored in a linked XLSX that could not be reliably retrieved through the available web path; no prices guessed."},
+    {"name":"Kam Dental - Baytown and Humble, TX","reason":"Provider publishes target-code price ranges across two locations but does not map endpoints to individual offices; ranges were not converted to scalar site prices."},
+    {"name":"Community College of Denver Dental Hygiene Clinic, CO","reason":"Current fixed public clinic and SB17-065 disclosures are verified, but exact target-code fee values were not retrievable cleanly enough to certify."},
+    {"name":"Oneida Park Dental Studio, CO","reason":"Current practice links an SB17-065 fee disclosure, but exact target-code values could not be retrieved from the linked document; held rather than inferred."},
+    {"name":"Sage Dental / Hearn Dentistry / other new-patient offers","reason":"Current cash offers bundle target services as promotional packages; registry policy excludes new-patient specials and does not split bundles."},
+    {"name":"Dental plan, PPO, Medicaid and benchmark schedules","reason":"Member, payer, reimbursement and benchmark pricing is not unrestricted provider self-pay pricing."}
+  ]
+}
