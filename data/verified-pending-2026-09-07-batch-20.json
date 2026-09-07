@@ -1,0 +1,38 @@
+{
+  "batch": "2026-09-07-beast-mode-20",
+  "status": "VERIFIED_PENDING_NEON",
+  "reason_pending": "Dental schema migration has been prepared and validated on a temporary Neon branch but has not been applied to main pending explicit approval.",
+  "target_codes": ["D0150", "D0180", "D0210", "D0274", "D0330"],
+  "summary": {
+    "new_physical_clinics": 1,
+    "new_exact_price_points": 4,
+    "states": ["CO"]
+  },
+  "records": [
+    {
+      "registry_id": "CO-JEFFERSON-LITTLETON-KIP-DENTAL",
+      "clinic_name": "Kip Dental",
+      "state": "CO",
+      "city": "Littleton",
+      "zip": "80123",
+      "address": "5021 S Jellison Way, Unit C, Littleton, CO 80123",
+      "phone": "720-608-5557",
+      "clinic_type": "Private general and cosmetic dental practice",
+      "source_year": 2026,
+      "freshness": "CURRENT",
+      "evidence_grade": "A-",
+      "price_basis": "Provider-published Gloss Dental Membership page, undiscounted Original Price column; membership prices excluded",
+      "pricing_source_url": "https://kipdental.com/gloss-dental-membership/",
+      "location_url": "https://kipdental.com/",
+      "prices": {"D0150":132.00,"D0180":null,"D0210":187.00,"D0274":94.00,"D0330":162.00},
+      "note": "Current provider page explicitly separates each procedure's Original Price from the discounted Gloss membership price. Registry uses only the undiscounted Original Price: D0150 $132, D0210 $187, D0274 $94 and D0330 $162. D0180 is not individually listed and remains null. Current Kip Dental site independently confirms the fixed Littleton office at 5021 S Jellison Way Unit C and phone 720-608-5557. The separate $125 first-visit cleaning/exams/x-rays special is not used."
+    }
+  ],
+  "held_or_rejected": [
+    {"name":"Kiamichi Family Medical Center - Battiest, Idabel, Hugo and Broken Bow, OK","reason":"Current official site explicitly says dental services are available at all locations and current contact page verifies all four fixed sites. Exact provider self-pay CDT schedule located, but the browser cannot render the underlying PDF reliably enough for required page-level verification; held rather than committing from an unrenderable PDF."},
+    {"name":"Advanced Brookline Dental, MA","reason":"Current page explicitly labels prices as self-pay, but its $225 preventive amount bundles cleaning, exam, full-series x-rays and fluoride under D0150. Registry does not assign a multi-service bundle total to D0150."},
+    {"name":"Utah Tech University Dental Hygiene Clinic, UT","reason":"Current public fixed clinic and exact plain-language x-ray fees are verified, but the provider page does not publish CDT mappings; registry does not infer D0210 from 'Full Mouth X-Rays'."},
+    {"name":"San Juan College Dental Hygiene Clinic, NM; Central Community College Dental Hygiene Clinic, NE; Wichita State Dental Hygiene Clinic, KS; College of Southern Nevada Dental Hygiene Clinic, NV","reason":"Current fixed public clinics are verified, but no provider-owned current exact target-CDT scalar fee table has yet been located."},
+    {"name":"State Medicaid, workers-comp, dental-plan, benchmark and reimbursement schedules","reason":"Payer, benefit, member, reimbursement or modeled prices are not unrestricted provider self-pay office prices."}
+  ]
+}
