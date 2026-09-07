@@ -1,0 +1,37 @@
+{
+  "batch": "2026-09-07-beast-mode-22",
+  "status": "VERIFIED_PENDING_NEON",
+  "reason_pending": "Dental schema migration has been prepared and validated on a temporary Neon branch but has not been applied to main pending explicit approval.",
+  "target_codes": ["D0150", "D0180", "D0210", "D0274", "D0330"],
+  "summary": {
+    "new_physical_clinics": 1,
+    "new_exact_price_points": 4,
+    "states": ["CO"]
+  },
+  "records": [
+    {
+      "registry_id": "CO-WELD-GREELEY-GREELEY-DENTAL-HEALTH",
+      "clinic_name": "Greeley Dental Health",
+      "state": "CO",
+      "city": "Greeley",
+      "zip": "80634",
+      "address": "1600 23rd Ave #200, Greeley, CO 80634",
+      "phone": "970-353-4329",
+      "clinic_type": "Private general/family dental practice",
+      "source_year": 2026,
+      "freshness": "CURRENT",
+      "evidence_grade": "A",
+      "price_basis": "Provider-published Gloss Dental Membership page, undiscounted Original Price column; membership prices excluded",
+      "pricing_source_url": "https://greeleydentalhealth.com/gloss-dental-membership/",
+      "location_url": "https://greeleydentalhealth.com/",
+      "prices": {"D0150":128.00,"D0180":null,"D0210":180.00,"D0274":90.00,"D0330":156.00},
+      "note": "Current provider page explicitly separates Original Price from Gloss membership pricing. Registry uses only the undiscounted Original Price: D0150 $128, D0210 $180, D0274 $90 and D0330 $156. D0180 is not individually listed and remains null. The same page and current provider homepage independently confirm the fixed Greeley office at 1600 23rd Ave #200 and phone 970-353-4329. The separate $125 first-visit cleaning/exam/x-ray special is excluded. Hard check against the main August Colorado batch found no existing Greeley Dental Health record; Highlands Ranch Dental Group from the same search family was identified as an existing Batch 03 record and excluded."
+    }
+  ],
+  "held_or_rejected": [
+    {"name":"Highlands Ranch Dental Group, CO","reason":"Hard dedupe against 2026-08-30 Batch 03 confirmed the same practice was already committed; excluded from this batch."},
+    {"name":"Windsor Family Dentistry, Panorama Dental, Sage Dental Care, Advantage Dental Group, 38th Modern Dental, Discovery Kids Pediatric Dentistry","reason":"Existing August registry records; excluded as duplicates."},
+    {"name":"Ancient provider/benefit fee PDFs surfaced by broad search","reason":"Stale or non-current schedule evidence was not substituted for current provider pricing."},
+    {"name":"State Medicaid, PPO, dental-plan, benchmark and reimbursement schedules","reason":"Payer, member, reimbursement or modeled prices are not unrestricted provider self-pay office prices."}
+  ]
+}
