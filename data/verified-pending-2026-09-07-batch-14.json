@@ -1,0 +1,57 @@
+{
+  "batch": "2026-09-07-beast-mode-14",
+  "status": "VERIFIED_PENDING_NEON",
+  "reason_pending": "Dental schema migration has been prepared and validated on a temporary Neon branch but has not been applied to main pending explicit approval.",
+  "target_codes": ["D0150", "D0180", "D0210", "D0274", "D0330"],
+  "summary": {
+    "new_physical_clinics": 2,
+    "new_exact_price_points": 8,
+    "states": ["CO", "MT"]
+  },
+  "records": [
+    {
+      "registry_id": "CO-EL-PASO-COLORADO-SPRINGS-PPSC-DELTA-DENTAL",
+      "clinic_name": "Pikes Peak State College Delta Dental Oral Health Career Center",
+      "state": "CO",
+      "city": "Colorado Springs",
+      "zip": "80921",
+      "address": "11125 Cross Peak View, Colorado Springs, CO 80921",
+      "phone": "719-502-4049",
+      "clinic_type": "Public college dental hygiene / dental assisting teaching clinic",
+      "source_year": 2026,
+      "freshness": "CURRENT",
+      "evidence_grade": "A",
+      "price_basis": "PPSC provider-owned current Delta Dental Oral Health Career Center Fee Schedule",
+      "pricing_source_url": "https://www.pikespeak.edu/programs/dental/PPSC%20DC%20Fee%20Schedule%20.pdf",
+      "location_url": "https://pikespeak.edu/programs/dental/patients.php",
+      "prices": {"D0150":10.00,"D0180":0.00,"D0210":30.00,"D0274":12.00,"D0330":25.00},
+      "note": "Current PPSC patient page confirms the clinic is open to the public, provides dental exams and radiographs, and identifies the Delta Dental Center physical address. The linked provider-owned fee schedule individually prices all five target codes. D0180 is explicitly published at $0; this is a real listed fee rather than a missing value."
+    },
+    {
+      "registry_id": "MT-YELLOWSTONE-BILLINGS-YELLOWSTONE-FAMILY",
+      "clinic_name": "Yellowstone Family Dental",
+      "state": "MT",
+      "city": "Billings",
+      "zip": "59101",
+      "address": "1045 N 27th Street, Billings, MT 59101",
+      "phone": "406-245-7026",
+      "clinic_type": "Private dental practice",
+      "source_year": 2024,
+      "freshness": "CURRENT",
+      "evidence_grade": "A-",
+      "price_basis": "Current provider-linked Affordable Dental Discount Plan brochure REGULAR FEE column; member/included pricing excluded",
+      "pricing_source_url": "https://billingsmtdentist.com/wp-content/uploads/2024/11/1024.6657-YFD-Affrdble-Dntl-Plan_NoC.pdf",
+      "location_url": "https://billingsmtdentist.com/new-patients/discount-plan/",
+      "prices": {"D0150":201.00,"D0180":null,"D0210":null,"D0274":87.00,"D0330":151.00},
+      "note": "The live practice homepage and current discount-plan page link directly to this brochure. Registry uses only the brochure's undiscounted REGULAR FEE column, not the plan's included/member cost. The current linked brochure identifies the same Billings office and phone. D0180 and D0210 are not individually shown and remain null."
+    }
+  ],
+  "held_or_rejected": [
+    {"name":"Wood County Community Health Center, OH","reason":"Current health-center page actively links a dental price chart, but the exact chart is a 2020 file. Held rather than representing those exact prices as current without a newer fee confirmation."},
+    {"name":"Carteret County Dental Program, NC","reason":"FY2026-27 exact fees are current, but treatment is described through a mobile/school dental program; no defensible fixed treatment site has been verified for geocoding."},
+    {"name":"Richmond County Health Department Dental, NC","reason":"FY2026-27 board materials reference a dental fee schedule, but the embedded exact CDT table carries an old 2010-2011 header. Held pending proof that those values were formally carried forward."},
+    {"name":"Montana University System dental schedules","reason":"Benefit-plan maximum reimbursement/allowance schedules, not individual provider patient charges."},
+    {"name":"King County Ryan White dental fee schedule","reason":"Program maximum-pay schedule, not provider self-pay pricing."},
+    {"name":"State Medicaid dental schedules","reason":"Government reimbursement schedules are not provider self-pay charges."}
+  ]
+}
