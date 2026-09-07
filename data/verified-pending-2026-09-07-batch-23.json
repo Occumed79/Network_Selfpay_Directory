@@ -1,0 +1,36 @@
+{
+  "batch": "2026-09-07-beast-mode-23",
+  "status": "VERIFIED_PENDING_NEON",
+  "reason_pending": "Dental schema migration has been prepared and validated on a temporary Neon branch but has not been applied to main pending explicit approval.",
+  "target_codes": ["D0150", "D0180", "D0210", "D0274", "D0330"],
+  "summary": {
+    "new_physical_clinics": 1,
+    "new_exact_price_points": 4,
+    "states": ["CO"]
+  },
+  "records": [
+    {
+      "registry_id": "CO-TELLER-WOODLAND-PARK-DENTAL-GROUP",
+      "clinic_name": "Woodland Park Dental Group",
+      "state": "CO",
+      "city": "Woodland Park",
+      "zip": "80863",
+      "address": "150 Morning Sun Drive, Suite 200W, Woodland Park, CO 80863",
+      "phone": "719-387-0472",
+      "clinic_type": "Private general dental practice",
+      "source_year": 2026,
+      "freshness": "CURRENT",
+      "evidence_grade": "A",
+      "price_basis": "Provider-published Gloss Dental Membership page, undiscounted Original Price column; membership prices excluded",
+      "pricing_source_url": "https://woodlandparkdentalgroup.com/gloss-dental-membership/",
+      "location_url": "https://woodlandparkdentalgroup.com/gloss-dental-membership/",
+      "prices": {"D0150":128.00,"D0180":null,"D0210":182.00,"D0274":90.00,"D0330":156.00},
+      "note": "Current provider page explicitly separates Original Price from discounted Gloss membership pricing. Registry uses only the undiscounted Original Price: D0150 $128, D0210 $182, D0274 $90 and D0330 $156. D0180 is not individually listed and remains null. The same current provider page confirms the fixed Woodland Park office at 150 Morning Sun Drive Suite 200W and phone 719-387-0472. Hard check against the main August Colorado batch found no existing Woodland Park Dental Group record. Any separate new-patient offer or membership benefit is excluded."
+    }
+  ],
+  "held_or_rejected": [
+    {"name":"Highlands Ranch Dental Group, CO","reason":"Hard dedupe confirmed an existing 2026-08-30 Batch 03 record."},
+    {"name":"Windsor Family Dentistry, Panorama Dental, Sage Dental Care, Advantage Dental Group, 38th Modern Dental, Discovery Kids Pediatric Dentistry, Lone Tree Modern Dental","reason":"Existing August registry records; excluded as duplicates."},
+    {"name":"State payer, Medicaid, PPO, benefit-plan, benchmark and reimbursement schedules","reason":"Not unrestricted provider self-pay office pricing."}
+  ]
+}
