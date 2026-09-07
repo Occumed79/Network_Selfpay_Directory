@@ -1,0 +1,56 @@
+{
+  "batch": "2026-09-07-beast-mode-17",
+  "status": "VERIFIED_PENDING_NEON",
+  "reason_pending": "Dental schema migration has been prepared and validated on a temporary Neon branch but has not been applied to main pending explicit approval.",
+  "target_codes": ["D0150", "D0180", "D0210", "D0274", "D0330"],
+  "summary": {
+    "new_physical_clinics": 2,
+    "new_exact_price_points": 2,
+    "states": ["FL"]
+  },
+  "records": [
+    {
+      "registry_id": "FL-PALM-BEACH-BOCA-RATON-DONE-IN-ONE",
+      "clinic_name": "Done In One Dental Implant Center - Boca Raton",
+      "state": "FL",
+      "city": "Boca Raton",
+      "zip": "33432",
+      "address": "327 Plaza Real, Suite 305, Boca Raton, FL 33432",
+      "phone": "561-468-8812",
+      "clinic_type": "Private dental implant center / specialty-focused dental practice",
+      "source_year": 2026,
+      "freshness": "CURRENT",
+      "evidence_grade": "A-",
+      "price_basis": "Provider-published Lifetime Warranty table, Standard Fee column; warranty-included benefit excluded",
+      "pricing_source_url": "https://getdoneinone.com/dio-warranty/",
+      "location_url": "https://getdoneinone.com/contact/",
+      "prices": {"D0150":null,"D0180":null,"D0210":null,"D0274":null,"D0330":130.00},
+      "note": "Provider's current warranty page separately lists D0330 Panoramic X-Ray as Included under the warranty and $130 in the Standard Fee column. Registry uses only the explicit undiscounted Standard Fee, not the included warranty benefit. The D0150/D0120 assessment line is grouped and is intentionally not split or assigned to D0150. Current provider contact materials confirm the Boca Raton fixed implant center. The warranty terms explicitly identify Boca Raton and Tampa as Done In One locations for covered maintenance services."
+    },
+    {
+      "registry_id": "FL-HILLSBOROUGH-RIVERVIEW-DONE-IN-ONE",
+      "clinic_name": "Done In One Dental Implant Center - Tampa/Riverview",
+      "state": "FL",
+      "city": "Riverview",
+      "zip": "33569",
+      "address": "10825 Boyette Rd, Suite B, Riverview, FL 33569",
+      "phone": "813-308-2228",
+      "clinic_type": "Private dental implant center / specialty-focused dental practice",
+      "source_year": 2026,
+      "freshness": "CURRENT",
+      "evidence_grade": "A-",
+      "price_basis": "Provider-published Lifetime Warranty table, Standard Fee column; warranty-included benefit excluded",
+      "pricing_source_url": "https://getdoneinone.com/dio-warranty/",
+      "location_url": "https://getdoneinone.com/contact/",
+      "prices": {"D0150":null,"D0180":null,"D0210":null,"D0274":null,"D0330":130.00},
+      "note": "Provider's current warranty page separately lists D0330 Panoramic X-Ray as Included under the warranty and $130 in the Standard Fee column. Registry uses only the explicit undiscounted Standard Fee, not the included warranty benefit. The D0150/D0120 assessment line is grouped and is intentionally not split or assigned to D0150. Current provider contact materials confirm the Tampa/Riverview fixed implant center, and the warranty terms explicitly identify Tampa and Boca Raton as Done In One locations for covered maintenance services. Newly opened Jacksonville is not fanned out because the warranty page's location-specific applicability language has not yet been updated to include it."
+    }
+  ],
+  "held_or_rejected": [
+    {"name":"Done In One Dental Implant Center - Jacksonville, FL","reason":"Current contact page confirms the new fixed Jacksonville office, but the warranty/standard-fee page still explicitly references Tampa and Boca Raton as the applicable Done In One locations for covered maintenance; the $130 D0330 standard fee is not fanned out to Jacksonville until applicability is explicit."},
+    {"name":"Done In One D0150/D0120 Assessment of Patient","reason":"Provider publishes a single $185 standard fee against the grouped codes D0150/D0120. Registry policy does not split or assume a grouped multi-code charge is an individual D0150 scalar."},
+    {"name":"Carteret County Dental Program, NC","reason":"Current FY2026-27 exact fee schedule is verified, but treatment is delivered through a mobile/school dental program; no defensible fixed treatment site is available for registry geocoding."},
+    {"name":"Community College of Denver Dental Hygiene Clinic, CO","reason":"Current fixed public clinic is verified, but exact target-code values in the linked SB17-065 fee document remain unretrievable cleanly enough to certify."},
+    {"name":"Dental-plan, payer, reimbursement, benchmark and bundled promotional schedules","reason":"These are not unrestricted provider self-pay office prices or do not expose separable target-code scalar values."}
+  ]
+}
