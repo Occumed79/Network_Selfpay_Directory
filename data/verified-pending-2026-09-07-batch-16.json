@@ -1,0 +1,37 @@
+{
+  "batch": "2026-09-07-beast-mode-16",
+  "status": "VERIFIED_PENDING_NEON",
+  "reason_pending": "Dental schema migration has been prepared and validated on a temporary Neon branch but has not been applied to main pending explicit approval.",
+  "target_codes": ["D0150", "D0180", "D0210", "D0274", "D0330"],
+  "summary": {
+    "new_physical_clinics": 1,
+    "new_exact_price_points": 4,
+    "states": ["LA"]
+  },
+  "records": [
+    {
+      "registry_id": "LA-ORLEANS-NEW-ORLEANS-HCH-EDNA-PILSBURY",
+      "clinic_name": "New Orleans Health Care for the Homeless - Edna Pilsbury Main Site",
+      "state": "LA",
+      "city": "New Orleans",
+      "zip": "70113",
+      "address": "2222 Simon Bolivar Avenue, 2nd Floor, New Orleans, LA 70113",
+      "phone": "504-658-2785",
+      "clinic_type": "Municipal public-health / Health Care for the Homeless fixed dental clinic",
+      "source_year": 2026,
+      "freshness": "CURRENT",
+      "evidence_grade": "A-",
+      "price_basis": "Current City of New Orleans Code of Ordinances Sec. 82-280 dental Fee for Service Program column",
+      "pricing_source_url": "https://library.municode.com/la/new_orleans/codes/code_of_ordinances?nodeId=PTIICO_CH82HESA_ARTIXMOFL_S82-280MEDEFE",
+      "location_url": "https://nola.gov/next/health-care-for-the-homeless/topics/locations-and-hours/",
+      "prices": {"D0150":49.19,"D0180":30.00,"D0210":61.79,"D0274":null,"D0330":58.43},
+      "note": "The current New Orleans Code of Ordinances authorizes the City Health Department to charge medical and dental fees at city-operated clinics in accordance with the embedded dental schedule. Registry uses the general Fee for Service Program amounts, not Medicaid, Council on Aging, Adult Dental Program, EDSPW, or non-Orleans columns. D0274 is not individually present in the codified schedule and remains null. Current city location materials explicitly confirm Dental service at the fixed Edna Pilsbury main site; Arthur Monday is currently medical/behavioral only and is not fanned out. Program access is tied to Health Care for the Homeless and should not be represented as unrestricted general-population dental access."
+    }
+  ],
+  "held_or_rejected": [
+    {"name":"Health & Wellness Center - Checotah, Eufaula, Poteau, Sallisaw, Warner, Wilburton, OK","reason":"Current provider About Us page explicitly says HWC has one dental facility in Stigler; other locations are not converted into fixed dental records."},
+    {"name":"Family Health Center of Southern Oklahoma - Atoka, Coalgate, Kingston","reason":"FHCSO operates permanent clinics and dental as an organizational service, but current site-level evidence does not establish the Tishomingo dental fee table as applicable to dental care at each of these individual sites; no fan-out without explicit confirmation."},
+    {"name":"Community College of Denver Dental Hygiene Clinic, CO","reason":"Current fixed public clinic and SB17-065 transparency requirement are verified, but the linked exact fee document still could not be retrieved cleanly enough to certify target-code scalar values."},
+    {"name":"Dental plan, PPO, Medicaid, benchmark and modeled-cost schedules","reason":"Member, payer, reimbursement, benchmark or modeled pricing is not unrestricted provider self-pay office pricing."}
+  ]
+}
