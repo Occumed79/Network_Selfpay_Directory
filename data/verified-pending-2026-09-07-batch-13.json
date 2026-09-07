@@ -1,0 +1,56 @@
+{
+  "batch": "2026-09-07-beast-mode-13",
+  "status": "VERIFIED_PENDING_NEON",
+  "reason_pending": "Dental schema migration has been prepared and validated on a temporary Neon branch but has not been applied to main pending explicit approval.",
+  "target_codes": ["D0150", "D0180", "D0210", "D0274", "D0330"],
+  "summary": {
+    "new_physical_clinics": 2,
+    "new_exact_price_points": 5,
+    "states": ["IN", "WI"]
+  },
+  "records": [
+    {
+      "registry_id": "WI-MONROE-TOMAH-DEER-CREEK",
+      "clinic_name": "Deer Creek Dental Clinic",
+      "state": "WI",
+      "city": "Tomah",
+      "zip": "54660",
+      "address": "820 N Superior Ave, Tomah, WI 54660",
+      "phone": "608-372-5000",
+      "clinic_type": "Private dental practice",
+      "source_year": 2026,
+      "freshness": "CURRENT",
+      "evidence_grade": "A",
+      "price_basis": "Provider-published Office Fees",
+      "pricing_source_url": "https://www.deercreekdentalclinic.com/financial/office-fees/",
+      "location_url": "https://www.deercreekdentalclinic.com/financial/office-fees/",
+      "prices": {"D0150":124.00,"D0180":null,"D0210":null,"D0274":null,"D0330":null},
+      "note": "Direct live provider office-fee page individually prices D0150 at $124. Other target codes are not individually listed and are intentionally null."
+    },
+    {
+      "registry_id": "IN-LAKE-GARY-IUN-DENTAL-EDUCATION",
+      "clinic_name": "Indiana University Northwest Dental Education Clinic",
+      "state": "IN",
+      "city": "Gary",
+      "zip": "46408",
+      "address": "3400 Broadway, Dunes Medical / Professional Building Room 1030, Gary, IN 46408",
+      "phone": "219-980-6772",
+      "clinic_type": "University dental education / dental hygiene teaching clinic",
+      "source_year": 2026,
+      "freshness": "CURRENT",
+      "evidence_grade": "A",
+      "price_basis": "University-owned current Services and Fees page",
+      "pricing_source_url": "https://northwest.iu.edu/dental-clinic/services-fees/index.html",
+      "location_url": "https://northwest.iu.edu/dental-clinic/index.html",
+      "prices": {"D0150":15.00,"D0180":null,"D0210":30.00,"D0274":17.00,"D0330":30.00},
+      "note": "Current IU Northwest Dental Education Clinic is open to the public and located onsite in the Dunes Medical/Professional Building. The current fee page individually prices all four entered target codes; D0180 is not listed and remains null. The clinic provides preventive dental services only and does not provide restorative services such as fillings or extractions."
+    }
+  ],
+  "held_or_rejected": [
+    {"name":"Carteret County Dental Program, NC","reason":"FY2026-27 exact fees are now verified, but current county materials describe dental care as delivered through a mobile school unit; no defensible fixed physical treatment location has been verified, so prices remain unpinned."},
+    {"name":"New Hampshire HealthCost provider estimates","reason":"State estimate/consumer-price data, not direct provider-published office self-pay fees."},
+    {"name":"West Virginia / South Dakota / New Hampshire Medicaid dental schedules","reason":"Payer reimbursement schedules, not provider self-pay charges."},
+    {"name":"Key Dental Plan state fee tables","reason":"Discount-plan member pricing, not unrestricted provider self-pay pricing."},
+    {"name":"ADA/regional dental fee surveys and modeled-cost sites","reason":"Benchmarks/estimates rather than individual provider charges."}
+  ]
+}
