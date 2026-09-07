@@ -1,0 +1,38 @@
+{
+  "batch": "2026-09-07-beast-mode-18",
+  "status": "VERIFIED_PENDING_NEON",
+  "reason_pending": "Dental schema migration has been prepared and validated on a temporary Neon branch but has not been applied to main pending explicit approval.",
+  "target_codes": ["D0150", "D0180", "D0210", "D0274", "D0330"],
+  "summary": {
+    "new_physical_clinics": 1,
+    "new_exact_price_points": 3,
+    "states": ["OK"]
+  },
+  "records": [
+    {
+      "registry_id": "OK-OSAGE-HOMINY-FAIRFAX-MEDICAL-DENTAL",
+      "clinic_name": "Hominy Family Health Center",
+      "state": "OK",
+      "city": "Hominy",
+      "zip": "74035",
+      "address": "119 W Main St, Hominy, OK 74035",
+      "phone": "918-885-4640",
+      "clinic_type": "FQHC / family health center with general dentistry",
+      "source_year": 2024,
+      "freshness": "REFRESH",
+      "evidence_grade": "A-",
+      "price_basis": "Fairfax Medical Facilities provider-hosted Dental Price Transparency Act self-pay table, Income Above 200% FPL/full-price column",
+      "pricing_source_url": "https://www.fairfaxclinic.com/wp-content/uploads/2024/11/Dental-Price-Transparency-Act-10.25.2024.pdf",
+      "location_url": "https://www.fairfaxclinic.com/",
+      "prices": {"D0150":104.00,"D0180":null,"D0210":null,"D0274":72.00,"D0330":122.00},
+      "note": "The provider-owned transparency sheet explicitly states the listed amounts are costs for self-pay patients and separately shows sliding-fee tiers. Registry uses the Income Above 200% FPL amount as the undiscounted/full self-pay charge. Exact schedule was revised 10/25/2024, so this record is tagged REFRESH rather than represented as 2026 pricing. Current 2026 NPPES and current dental-provider directory evidence confirm Hominy Family Health Center remains an active FQHC and fixed dental site at 119 W Main St. D0180 and D0210 are not present in the provider's published most-common-dental-services table and remain null."
+    }
+  ],
+  "held_or_rejected": [
+    {"name":"Lawton Community Health Center Family Dentistry, OK","reason":"Current fixed dental site and uninsured/self-pay access are verified, but the exact dental transparency rows are stored in a provider-linked spreadsheet that could not be retrieved reliably enough to certify target-code values. No prices guessed."},
+    {"name":"Morton Comprehensive Health Services - Main Clinic, Tulsa OK","reason":"Current dentistry and a fixed main-site dental presence are supported, and a provider-hosted HB1006 table exposes D0150, but the exact schedule's effective date/currentness is not sufficiently explicit yet. Held pending a cleaner freshness verification rather than adding another ambiguous REFRESH record."},
+    {"name":"Fairfax Medical Facilities - Fairfax/Newkirk locations, OK","reason":"Organization is current, but site-level evidence tying the Hominy dental self-pay fee table to fixed dental care at those individual locations is not strong enough for fan-out. Only Hominy is pinned."},
+    {"name":"Community Health Connection / Variety Care / Kiamichi older Oklahoma fee sheets","reason":"Located exact provider fee sheets are materially older and are held pending current or better-supported refresh evidence."},
+    {"name":"Dental plan, PPO, Medicaid, benchmark and bundled promotional schedules","reason":"Member, payer, reimbursement, benchmark or bundled pricing is not unrestricted provider self-pay office pricing or does not expose separable target-code scalar values."}
+  ]
+}
