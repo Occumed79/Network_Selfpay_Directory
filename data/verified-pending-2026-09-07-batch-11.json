@@ -1,0 +1,92 @@
+{
+  "batch": "2026-09-07-beast-mode-11",
+  "status": "VERIFIED_PENDING_NEON",
+  "reason_pending": "Neon MCP write endpoint remains blocked by connector schema mismatch; verified records are preserved in GitHub until database writes recover.",
+  "target_codes": ["D0150", "D0180", "D0210", "D0274", "D0330"],
+  "summary": {
+    "new_physical_clinics": 4,
+    "new_exact_price_points": 11,
+    "states": ["CT", "MA", "NJ", "SC"]
+  },
+  "records": [
+    {
+      "registry_id": "MA-MIDDLESEX-LITTLETON-NASHOBA-FAMILY",
+      "clinic_name": "Nashoba Family Dentists",
+      "state": "MA",
+      "city": "Littleton",
+      "zip": "01460",
+      "address": "256 Great Road, Suite 5, Littleton, MA 01460",
+      "phone": "978-486-8261",
+      "clinic_type": "Private dental practice",
+      "source_year": 2026,
+      "freshness": "CURRENT",
+      "evidence_grade": "A",
+      "price_basis": "Provider-published Office Fees",
+      "pricing_source_url": "https://www.nashobafamilydentists.com/financial/office-fees/",
+      "location_url": "https://www.nashobafamilydentists.com/financial/office-fees/",
+      "prices": {"D0150":130.00,"D0180":159.00,"D0210":186.00,"D0274":95.00,"D0330":191.00},
+      "note": "Direct live provider office-fee page with all five target codes individually priced. Site copyright is 2026. Direct Batch 03 audit confirmed Nashoba was not already present."
+    },
+    {
+      "registry_id": "NJ-WARREN-WASHINGTON-CASTLE-FAMILY",
+      "clinic_name": "Castle Family Dentistry",
+      "state": "NJ",
+      "city": "Washington",
+      "zip": "07882",
+      "address": "413 NJ-57, Washington, NJ 07882",
+      "phone": "908-689-0911",
+      "clinic_type": "Private dental practice",
+      "source_year": 2026,
+      "freshness": "CURRENT",
+      "evidence_grade": "A",
+      "price_basis": "Provider-published Office Fees",
+      "pricing_source_url": "https://castlefamilydentistry.com/financial/office-fees/",
+      "location_url": "https://castlefamilydentistry.com/financial/office-fees/",
+      "prices": {"D0150":122.00,"D0180":null,"D0210":null,"D0274":90.00,"D0330":null},
+      "note": "Direct provider office-fee page. Only exact target codes individually listed are entered; D0180, D0210, and D0330 are intentionally null. Site copyright is 2026."
+    },
+    {
+      "registry_id": "SC-RICHLAND-COLUMBIA-A-BRIGHTER-SMILE",
+      "clinic_name": "A Brighter Smile Family & Cosmetic Dentistry",
+      "state": "SC",
+      "city": "Columbia",
+      "zip": "29210",
+      "address": "1727 Broad River Road, Columbia, SC 29210",
+      "phone": "803-239-2200",
+      "clinic_type": "Private dental practice",
+      "source_year": null,
+      "freshness": "CURRENT",
+      "evidence_grade": "A-",
+      "price_basis": "Provider-published REGULAR FEE column on in-office uninsured discount-plan page; discounted/free member charges excluded",
+      "pricing_source_url": "https://www.abrightersmiledentistry.com/abs-dental-plan",
+      "location_url": "https://www.abrightersmiledentistry.com/abs-dental-plan",
+      "prices": {"D0150":60.00,"D0180":null,"D0210":null,"D0274":60.00,"D0330":105.00},
+      "note": "The provider explicitly distinguishes REGULAR FEE from plan discounts. Registry uses only undiscounted regular office fees. D0180 and D0210 are not individually listed and are intentionally null."
+    },
+    {
+      "registry_id": "CT-NEW-LONDON-WATERFORD-GRANITEVILLE",
+      "clinic_name": "Graniteville Dental Solutions",
+      "state": "CT",
+      "city": "Waterford",
+      "zip": "06385",
+      "address": "262 Boston Post Road, Waterford, CT 06385",
+      "phone": "860-443-0861",
+      "clinic_type": "Private dental practice",
+      "source_year": 2026,
+      "freshness": "CURRENT",
+      "evidence_grade": "A",
+      "price_basis": "Provider-published Office Fees",
+      "pricing_source_url": "https://granitevilledental.com/office-fees/",
+      "location_url": "https://granitevilledental.com/contact-us/",
+      "prices": {"D0150":null,"D0180":null,"D0210":null,"D0274":98.00,"D0330":null},
+      "note": "Direct current provider office-fee page independently prices D0274 at $98. The page also publishes a $540 bundle containing D1110/D0150/D0210/D1206; registry policy does not split that bundle, so D0150 and D0210 remain null. Current provider pages confirm the Waterford physical office."
+    }
+  ],
+  "held_or_rejected": [
+    {"name":"Timmons Dental, Fruitland ID","reason":"Current provider page bundles D0150/D0330/D0274 into a single $379 new-patient appointment; individual target-code prices cannot be separated."},
+    {"name":"KoLa Family & Cosmetic Dentistry, Austin TX","reason":"Current $99 new-patient package bundles D0150/D0330/D0210 and only gives a combined regular value; bundle not split."},
+    {"name":"Kam Dental, Baytown/Humble TX","reason":"Provider publishes ranges spanning two physical offices without mapping endpoints to each location; ambiguous per-location values withheld."},
+    {"name":"Midwest Oral & Maxillofacial Surgery","reason":"Provider explicitly states listed fees are membership-plan prices, not unrestricted standard self-pay fees."},
+    {"name":"State Medicaid/Medicare/PPO dental fee schedules","reason":"Payer reimbursement or contracted schedules are not provider self-pay charges."}
+  ]
+}
