@@ -1,0 +1,38 @@
+{
+  "batch": "2026-09-07-beast-mode-19",
+  "status": "VERIFIED_PENDING_NEON",
+  "reason_pending": "Dental schema migration has been prepared and validated on a temporary Neon branch but has not been applied to main pending explicit approval.",
+  "target_codes": ["D0150", "D0180", "D0210", "D0274", "D0330"],
+  "summary": {
+    "new_physical_clinics": 1,
+    "new_exact_price_points": 3,
+    "states": ["OR"]
+  },
+  "records": [
+    {
+      "registry_id": "OR-WASHINGTON-HILLSBORO-PACIFIC-UNIVERSITY-DENTAL",
+      "clinic_name": "Pacific University Dental Clinic",
+      "state": "OR",
+      "city": "Hillsboro",
+      "zip": "97123",
+      "address": "222 SE 8th Ave., Suite 270, Hillsboro, OR 97123",
+      "phone": "503-352-7373",
+      "clinic_type": "University dental hygiene / dental therapy teaching clinic",
+      "source_year": 2023,
+      "freshness": "REFRESH",
+      "evidence_grade": "A-",
+      "price_basis": "Current provider-owned Services & Fees page / Dental Health Clinic Fee Schedule",
+      "pricing_source_url": "https://www.pacificu.edu/about/campuses-locations/healthcare-clinics/pacific-dental-clinic/services-fees",
+      "location_url": "https://www.pacificu.edu/about/campuses-locations/healthcare-clinics/pacific-dental-clinic",
+      "prices": {"D0150":null,"D0180":null,"D0210":50.00,"D0274":30.00,"D0330":50.00},
+      "note": "Pacific University's current live clinic page states that clinic fees use accepted ADA codes, are set by the clinic, and are updated yearly. The same live page contains conflicting schedule-age language ('accepted beginning January, 2024' and later 'Fees effective as of January 1, 2023'); registry conservatively uses 2023 as source_year and tags the record REFRESH rather than CURRENT. D0274 is individually listed at $30. The line 'D0210 FMX or D0330 PANO | $50' explicitly prices either coded imaging service at $50, so both D0210 and D0330 are entered at $50. The separately listed free Dental Exam has no explicit target CDT mapping and is not assigned to D0150. Current university clinic page independently confirms the fixed Hillsboro site, public patient care, current hours and phone."
+    }
+  ],
+  "held_or_rejected": [
+    {"name":"Eastern International College Dental Hygiene Clinic, NJ","reason":"Current 2025-2026 clinic manual publishes a single $25 radiographs category spanning D0210, D0330, D0274 and other radiograph codes without individual code-specific scalar amounts; registry does not split the aggregate category fee."},
+    {"name":"Lawton Community Health Center Family Dentistry, OK","reason":"Current self-pay transparency page and fixed dental site are verified, but provider-linked dental XLSX still cannot be retrieved reliably enough to certify exact target-code rows."},
+    {"name":"Capital Dental, Lincoln NE","reason":"Current page publishes target services as bundles/ranges (including D0150/D0210 and D0330 ranges) rather than fixed code-specific scalar office prices; ranges are not converted to arbitrary points."},
+    {"name":"Timmons Dental, ID and similar bundled new-patient tables","reason":"Multiple target codes share one package price; bundles are not split."},
+    {"name":"Dental-plan, PPO, Medicaid, benchmark and modeled-cost schedules","reason":"Member, payer, reimbursement, benchmark or modeled pricing is not unrestricted provider self-pay office pricing."}
+  ]
+}
