@@ -1,0 +1,93 @@
+{
+  "status": "VERIFIED_PENDING_NEON",
+  "records": [
+    {
+      "registry_id": "OH-ERIE-MAIN-DENTAL",
+      "state": "OH",
+      "city": "Sandusky",
+      "zip": "",
+      "clinic_name": "Erie County Community Health Center Main Campus Dental",
+      "address": "420 Superior Street, Sandusky, OH",
+      "clinic_type": "FQHC Dental Clinic",
+      "source_year": 2026,
+      "freshness": "CURRENT",
+      "evidence_grade": "A",
+      "price_basis": "2026 Dental Good Faith Estimate",
+      "pricing_source_url": "https://eriehealthohio.com/wp-content/uploads/2026/07/Dental-Good-Faith-Estimate.pdf",
+      "location_url": "https://eriehealthohio.com/dental/",
+      "note": "Provider states dental is delivered at four listed sites. D0210 is not itemized and is omitted.",
+      "prices": {
+        "D0150": 80,
+        "D0180": 80,
+        "D0274": 80,
+        "D0330": 128
+      }
+    },
+    {
+      "registry_id": "OH-ERIE-EHOVE-DENTAL",
+      "state": "OH",
+      "city": "Milan",
+      "zip": "",
+      "clinic_name": "Erie County Community Health Center EHOVE Dental",
+      "address": "316 West Mason Road, Milan, OH",
+      "clinic_type": "FQHC Dental Clinic",
+      "source_year": 2026,
+      "freshness": "CURRENT",
+      "evidence_grade": "A",
+      "price_basis": "2026 Dental Good Faith Estimate",
+      "pricing_source_url": "https://eriehealthohio.com/wp-content/uploads/2026/07/Dental-Good-Faith-Estimate.pdf",
+      "location_url": "https://eriehealthohio.com/dental/",
+      "note": "Provider states dental is delivered at four listed sites. D0210 is not itemized and is omitted.",
+      "prices": {
+        "D0150": 80,
+        "D0180": 80,
+        "D0274": 80,
+        "D0330": 128
+      }
+    },
+    {
+      "registry_id": "OH-ERIE-MARGARETTA-DENTAL",
+      "state": "OH",
+      "city": "Castalia",
+      "zip": "",
+      "clinic_name": "Erie County Community Health Center Margaretta Dental",
+      "address": "305 S. Washington, Castalia, OH",
+      "clinic_type": "FQHC Dental Clinic",
+      "source_year": 2026,
+      "freshness": "CURRENT",
+      "evidence_grade": "A",
+      "price_basis": "2026 Dental Good Faith Estimate",
+      "pricing_source_url": "https://eriehealthohio.com/wp-content/uploads/2026/07/Dental-Good-Faith-Estimate.pdf",
+      "location_url": "https://eriehealthohio.com/dental/",
+      "note": "Provider states dental is delivered at four listed sites. D0210 is not itemized and is omitted.",
+      "prices": {
+        "D0150": 80,
+        "D0180": 80,
+        "D0274": 80,
+        "D0330": 128
+      }
+    },
+    {
+      "registry_id": "OH-ERIE-KELLEYS-DENTAL",
+      "state": "OH",
+      "city": "Kelleys Island",
+      "zip": "",
+      "clinic_name": "Erie County Community Health Center Kelleys Island Dental",
+      "address": "117 Addison Street, Kelleys Island, OH",
+      "clinic_type": "FQHC Dental Clinic",
+      "source_year": 2026,
+      "freshness": "CURRENT",
+      "evidence_grade": "A",
+      "price_basis": "2026 Dental Good Faith Estimate",
+      "pricing_source_url": "https://eriehealthohio.com/wp-content/uploads/2026/07/Dental-Good-Faith-Estimate.pdf",
+      "location_url": "https://eriehealthohio.com/dental/",
+      "note": "Provider states dental is delivered at four listed sites. D0210 is not itemized and is omitted.",
+      "prices": {
+        "D0150": 80,
+        "D0180": 80,
+        "D0274": 80,
+        "D0330": 128
+      }
+    }
+  ]
+}
