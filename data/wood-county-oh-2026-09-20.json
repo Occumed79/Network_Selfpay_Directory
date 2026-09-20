@@ -1,1 +1,28 @@
-{"status":"VERIFIED_PENDING_NEON","records":[]}
+{
+  "status": "VERIFIED_PENDING_NEON",
+  "records": [
+    {
+      "registry_id": "OH-WOOD-CHC-DENTAL",
+      "state": "OH",
+      "city": "Bowling Green",
+      "zip": "43402",
+      "clinic_name": "Wood County Community Health Center Dental",
+      "address": "1840 East Gypsy Lane Road, Bowling Green, OH 43402",
+      "clinic_type": "County Community Health Center Dental Clinic",
+      "source_year": 2020,
+      "freshness": "LEGACY",
+      "evidence_grade": "A-",
+      "price_basis": "Provider published patient dental price list",
+      "pricing_source_url": "https://woodcountyhealth.org/wp-content/uploads/2025/11/Dental-Price-List-01-2020.pdf",
+      "location_url": "https://woodcountyhealth.org/health-center/services/dental-care/",
+      "note": "Active dental clinic verified in 2026. Source fee file is older and should be refreshed.",
+      "prices": {
+        "D0150": 94,
+        "D0180": 102,
+        "D0210": 141,
+        "D0274": 70,
+        "D0330": 122
+      }
+    }
+  ]
+}
